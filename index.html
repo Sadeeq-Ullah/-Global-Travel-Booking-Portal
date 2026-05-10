@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital@0;1&family=Share+Tech&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Home - Travel Booking</title>
+</head>
+
+<body class="page__body">
+    <main class="main" id="main">
+        <header class="header" id="header"></header>
+        <div class="major-container">
+            <section class="hero">
+                <div class="hero__left">
+                    <div class="hero__text-section">
+                        <h1 class="hero__title">Discover the World with Us</h1>
+                        <p class="hero__description">Explore breathtaking destinations and create unforgettable memories
+                            with our expertly crafted tours.</p>
+                    </div>
+
+                    <div class="hero__buttons">
+                        <div><a href="" class="explore-btn">Start Exploring</a></div>
+                        <div><a href="" class="viewtours-btn">View Tours</a></div>
+                    </div>
+                </div>
+
+                <div class="hero__right">
+                    <form method="post" class="form-section">
+                        <div class="form-field">
+                            <label for="destination">Destination</label>
+                            <input type="text" name="destination" id="destination" required
+                                placeholder="Where do you want to go?" autocomplete="off">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="check-in">Check In</label>
+                                <input type="date" name="check-in" id="check-in" required autocomplete="off">
+                            </div>
+                            <div class="form-field">
+                                <label for="check-out">Check Out</label>
+                                <input type="date" name="check-out" id="check-out" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="adults">Adults</label>
+                                <input type="number" name="adults" id="adults" value="2" min="1" max="20">
+                            </div>
+                            <div class="form-field">
+                                <label for="children">Children</label>
+                                <input type="number" name="children" id="children" value="0" min="0" max="20">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="form-submit">Search Tours</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section class="about-us">
+            <div class="about-us__content">
+                <h2 class="about-us__label">About us</h2>
+                <h2 class="about-us__title">Creating Unforgettable Travel Experiences</h2>
+                <p class="about-us__description">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                    accusantium doloremque laudantium, totam rem aperiam eaque ipsa
+                    quae ab illo inventore veritatis.
+                    <br>
+                    <br>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                    blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
+                </p>
+                <ul class="about-us__list">
+                    <li class="about-us__item">Expert local guides in every destination</li>
+                    <li class="about-us__item">Customized itineraries for every traveler</li>
+                    <li class="about-us__item">24/7 customer support throughout your journey</li>
+                </ul>
+            </div>
+
+            <div class="about-us__image">
+                <div class="about-us__award-image">
+                    <img src="img/travel/showcase-12.webp" alt="" class="about-us__travelimg">
+                </div>
+                <div class="award-winner">
+                    <svg class="award-box__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17 15.2454V22.1169C17 22.393 16.7761 22.617 16.5 22.617C16.4094 22.617 16.3205 22.5923 16.2428 22.5457L12 20L7.75725 22.5457C7.52046 22.6877 7.21333 22.6109 7.07125 22.3742C7.02463 22.2964 7 22.2075 7 22.1169V15.2454C5.17107 13.7793 4 11.5264 4 9C4 4.58172 7.58172 1 12 1C16.4183 1 20 4.58172 20 9C20 11.5264 18.8289 13.7793 17 15.2454ZM9 16.4185V19.4676L12 17.6676L15 19.4676V16.4185C14.0736 16.7935 13.0609 17 12 17C10.9391 17 9.92643 16.7935 9 16.4185ZM12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z">
+                        </path>
+                    </svg>
+                    <div class="about-us__winner-text">
+                        <p class="about-us__text-head">Award Winner</p>
+                        <p class="about-us__text-award">Best Travel Agency 2024</p>
+                    </div>
+                </div>
+                <div class="about-us__rating">
+                    <img src="img/travel/misc-8.webp" alt="" class="rating-image">
+                    <div class="rating__content">
+                        <div class="stars-content">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span class="rating-number">4.9/5</span>
+                        </div>
+                        <span class="rating-strs">"Amazing experience!"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <div class="why-choose-us__header">
+                <span class="why-choose-us__label">WHY CHOOSE US</span>
+                <h2 class="why-choose-us__heading">What Makes Us Different</h2>
+                <p class="why-choose-us__description">
+                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet<br>
+                    consectetur adipisci velit
+                </p>
+                <p class="why-choose-us__line">
+                    Quis nostrum exercitationem ullam corporis suscipit laboriosam
+                </p>
+            </div>
+
+            <div class="why-choose-us__features">
+                <div class="feature">
+                    <div class="feature__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 640 640">
+                            <path
+                                d="M320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM370.7 389.1L226.4 444.6C207 452.1 187.9 433 195.4 413.6L250.9 269.3C254.2 260.8 260.8 254.2 269.3 250.9L413.6 195.4C433 187.9 452.1 207 444.6 226.4L389.1 370.7C385.9 379.2 379.2 385.8 370.7 389.1zM352 320C352 302.3 337.7 288 320 288C302.3 288 288 302.3 288 320C288 337.7 302.3 352 320 352C337.7 352 352 337.7 352 320z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature__heading">Expert Navigation</h3>
+                    <p class="feature__description">Quis nostrum exercitationem ullam corporis suscipit laboriosam</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                            <path
+                                d="M241 87.1l15 20.7 15-20.7C296 52.5 336.2 32 378.9 32 452.4 32 512 91.6 512 165.1l0 2.6c0 112.2-139.9 242.5-212.9 298.2-12.4 9.4-27.6 14.1-43.1 14.1s-30.8-4.6-43.1-14.1C139.9 410.2 0 279.9 0 167.7l0-2.6C0 91.6 59.6 32 133.1 32 175.8 32 216 52.5 241 87.1z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature__heading">Personalized Care</h3>
+                    <p class="feature__description">Excepteur sint occaecat cupidatat non proident sunt in culpa</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature__heading">Instant Booking</h3>
+                    <p class="feature__description">Ut enim ad minim veniam quis nostrud exercitation ullamco</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature__heading">Worldwide Coverage</h3>
+                    <p class="feature__description">Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-destinations">
+            <p class="featured-destinations__description">Featured Destinations</p>
+            <h2 class="featured-destinations__heading">Check Our Featured Destinations</h2>
+            <div class="featured-destinations__grid">
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-1.webp" alt="Santorini, Greece">
+                        <span class="destination__badge destination__badge--popular">Popular</span>
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Santorini, Greece</h3>
+                        <p class="destination__description">Experience breathtaking sunsets and pristine white-washed
+                            villages overlooking the azure Aegean Sea.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Romantic</span>
+                            <span class="destination__tag">Luxury</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">12 Tours Available</span>
+                            <bu class="destination__explore">Explore →</butt>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-5.webp" alt="Bali, Indonesia">
+                        <span class="destination__badge destination__badge--editors-pick">Editor's Pick</span>
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Bali, Indonesia</h3>
+                        <p class="destination__description">Discover tropical paradise with ancient temples, lush rice
+                            terraces, and world-class beaches.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Adventure</span>
+                            <span class="destination__tag">Culture</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">18 Tours Available</span>
+                            <div class="destination__explore">Explore →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-8.webp" alt="Machu Picchu, Peru">
+                        <span class="destination__badge destination__badge--new">New</span>
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Machu Picchu, Peru</h3>
+                        <p class="destination__description">Trek through ancient Incan ruins and witness one of the
+                            world's most spectacular archaeological sites.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Adventure</span>
+                            <span class="destination__tag">History</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">8 Tours Available</span>
+                            <div class="destination__explore">Explore →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-12.webp" alt="Kyoto, Japan">
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Kyoto, Japan</h3>
+                        <p class="destination__description">Immerse yourself in traditional Japanese culture with
+                            beautiful temples, gardens, and historic districts.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Culture</span>
+                            <span class="destination__tag">Peaceful</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">15 Tours Available</span>
+                            <div class="destination__explore">Explore →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-3.webp"
+                            alt="Swiss Alps, Switzerland">
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Swiss Alps, Switzerland</h3>
+                        <p class="destination__description">Adventure awaits in pristine mountain landscapes with
+                            world-class skiing and hiking opportunities.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Adventure</span>
+                            <span class="destination__tag">Nature</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">22 Tours Available</span>
+                            <div class="destination__explore">Explore →</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination">
+                    <div class="destination__image-wrapper">
+                        <img class="destination__image" src="img/travel/destination-16.webp" alt="Maldives">
+                    </div>
+                    <div class="destination__body">
+                        <h3 class="destination__name">Maldives</h3>
+                        <p class="destination__description">Escape to paradise with crystal-clear waters, overwater
+                            bungalows, and unparalleled luxury.</p>
+                        <div class="destination__tags">
+                            <span class="destination__tag">Luxury</span>
+                            <span class="destination__tag">Honeymoon</span>
+                        </div>
+                        <div class="destination__footer">
+                            <span class="destination__tours">9 Tours Available</span>
+                            <div class="destination__explore">Explore →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-decision">
+            <h2 class="travel-decision__heading">Can't Decide Where to Go?</h2>
+            <p class="travel-decision__description">Our travel experts are here to help you find the perfect destination
+                based on your preferences, budget, and travel style.</p>
+            <div class="travel-decision__buttons">
+                <div class="travel-decision__view-button">View All destinations</div>
+                <div class="travel-decision__talk-button">Talk to Expert</div>
+            </div>
+        </section>
+
+        <section class="featured-tours">
+            <div class="featured-tours__header">
+                <span class="featured-tours__subtitle">Featured Tours</span>
+                <h2 class="featured-tours__title">Check Our Featured Tours</h2>
+            </div>
+            <div class="featured-tours__grid">
+                <div class="tours-card">
+                    <img src="img/travel/tour-12.webp" alt="Mountain Adventure" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge">Best Seller</span>
+                            <span class="tours-card__price">$3,290</span>
+                        </div>
+                        <h3 class="tours-card__title">Alpine Mountain Adventure</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                7 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Switzerland
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8 2.223 8 12.027z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-15.webp" alt="Island Hopping" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--hot">Hot Deal</span>
+                            <span class="tours-card__price">$1,850</span>
+                        </div>
+                        <h3 class="tours-card__title">Tropical Island Hopping</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                6 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Philippines
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Duis auctor magna vel risus tincidunt consequat.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-18.webp" alt="Cultural Heritage" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--cultural">Cultural</span>
+                            <span class="tours-card__price">$2,640</span>
+                        </div>
+                        <h3 class="tours-card__title">Ancient Cultural Heritage</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                9 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Cambodia
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Vestibulum ante ipsum primis in faucibus orci luctus et
+                            ultrices posuere cubilia curae donec velit neque.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-22.webp" alt="Safari Experience" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--limited">Limited</span>
+                            <span class="tours-card__price">$4,120</span>
+                        </div>
+                        <h3 class="tours-card__title">Wildlife Safari Experience</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                12 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Kenya
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Nulla facilisi morbi tempus iaculis urna id volutpat
+                            lacus laoreet non curabitur gravida arcu ac tortor.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-25.webp" alt="Northern Lights" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--new">New Tour</span>
+                            <span class="tours-card__price">$3,750</span>
+                        </div>
+                        <h3 class="tours-card__title">Northern Lights Quest</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                8 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Norway
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Fusce ut placerat orci nulla pellentesque dignissim enim
+                            sit amet venenatis urna cursus eget nunc scelerisque.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8 2.223 8 12.027z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-28.webp" alt="Desert Journey" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--adventure">Adventure</span>
+                            <span class="tours-card__price">$2,180</span>
+                        </div>
+                        <h3 class="tours-card__title">Golden Desert Journey</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                6 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Morocco
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Mauris blandit aliquet elit eget tincidunt nibh pulvinar
+                            a proin gravida hendrerit lectus a molestie.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-20.webp" alt="City Explorer" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--popular">Popular</span>
+                            <span class="tours-card__price">$1,560</span>
+                        </div>
+                        <h3 class="tours-card__title">European City Explorer</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                10 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Europe
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas vestibulum.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8 2.223 8 12.027z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tours-card">
+                    <img src="img/travel/tour-17.webp" alt="Coastal Paradise" class="tours-card__image">
+                    <div class="tours-card__overlay">
+                        <div class="tours-card__top-labels">
+                            <span class="tours-card__badge tours-card__badge--luxury">Luxury</span>
+                            <span class="tours-card__price">$5,890</span>
+                        </div>
+                        <h3 class="tours-card__title">Coastal Paradise Retreat</h3>
+                        <div class="tours-card__meta">
+                            <span class="tours-card__days">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                11 Days
+                            </span>
+                            <span class="tours-card__location">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>
+                                Maldives
+                            </span>
+                        </div>
+                        <p class="tours-card__description">Curabitur arcu erat accumsan id imperdiet et porttitor at
+                            sem donec rutrum congue leo eget malesuada.</p>
+                        <div class="tours-card__bottom-labels">
+                            <a href="booking.html" class="tours-card__explore-button">Explore Tour</a>
+                            <div class="tours-card__stars">
+                                <div class="tours-card__stars-pattern">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <span class="tours-card__stars-rating">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a href="" class="Discover-morebtn">Discover More Adventures</a>
+        <section class="testimonials">
+            <div class="testimonials__header">
+                <h5 class="testimonials__subtitle">Testimonials</h5>
+                <h2 class="testimonials__title"><span>What Our Customers</span> <span>Are Saying</span></h2>
+            </div>
+
+            <div class="testimonials__body">
+                <div class="testimonials__track">
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            <p class="testimonial-card__text testimonial-card--member1">Proin iaculis purus consequat
+                                sem cure digni ssim donec
+                                porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget
+                                nibh et. Maecen aliquam, risus at semper.</p>
+                        </blockquote>
+                        <footer class="testimonial-card__footer">
+                            <div class="testimonial-card__meta">
+                                <h3 class="testimonial-card__name">Saul Goodman</h3>
+                                <span class="testimonial-card__role">CEO &amp; Founder</span>
+                                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <img src="img/person/person-m-9.webp" alt="Saul Goodman"
+                                    class="testimonial-card__avatar">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            <p class="testimonial-card__text testimonial-card--member2">Export tempor illum tamen malis
+                                malis eram quae irure esse
+                                labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua
+                                noster fugiat irure amet legam anim culpa.</p>
+                        </blockquote>
+                        <footer class="testimonial-card__footer">
+                            <div class="testimonial-card__meta">
+                                <h3 class="testimonial-card__name">Sara Wilsson</h3>
+                                <span class="testimonial-card__role">Designer</span>
+                                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <img src="img/person/person-f-5.webp" alt="Sara Wilsson"
+                                    class="testimonial-card__avatar">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            <p class="testimonial-card__text testimonial-card--member3">Enim nisi quem export duis
+                                labore cillum quae magna enim
+                                sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet
+                                eram fore quis sint minim.</p>
+                        </blockquote>
+                        <footer class="testimonial-card__footer">
+                            <div class="testimonial-card__meta">
+                                <h3 class="testimonial-card__name">Jena Karlis</h3>
+                                <span class="testimonial-card__role">Store Owner</span>
+                                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <img src="img/person/person-f-12.webp" alt="Jena Karlis"
+                                    class="testimonial-card__avatar">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <blockquote class="testimonial-card__quote">
+                            <p class="testimonial-card__text testimonial-card--member4">Fugiat enim eram quae cillum
+                                dolore dolor amet nulla culpa
+                                multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna
+                                sunt elit fore quem dolore labore illum veniam.</p>
+                        </blockquote>
+                        <footer class="testimonial-card__footer">
+                            <div class="testimonial-card__meta">
+                                <h3 class="testimonial-card__name">John Larson</h3>
+                                <span class="testimonial-card__role">Entrepreneur</span>
+                                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path live
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </svg>
+                                </div>
+                                <img src="img/person/person-m-12.webp" alt="John Larson"
+                                    class="testimonial-card__avatar">
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="radio-buttons">
+                <input type="radio" name="radio" class="radio-button" id="radio1" checked>
+                <input type="radio" name="radio" class="radio-button" id="radio2">
+                <input type="radio" name="radio" class="radio-button" id="radio3">
+                <input type="radio" name="radio" class="radio-button" id="radio4">
+            </div>
+        </section>
+
+        <section class="main-footer">
+            <div class="journey-start">
+                <h1 class="journey-start__heading">Ready to Start Your Next Adventure?</h1>
+                <p class="journey-start__description">Discover breathtaking destinations, create unforgettable memories,
+                    and explore the world with our expertly crafted travel packages. From exotic beaches to mountain
+                    peaks, your perfect journey awaits.</p>
+                <div class="journey-buttons">
+                    <div class="journey-start__exp-destinations">Explore Destination</div>
+                    <div class="journey-start__plan">Plan You Trip</div>
+                </div>
+            </div>
+            <div class="footer-features">
+                <div class="footer-features__card">
+                    <div class="footer-features__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM9.71002 19.6674C8.74743 17.6259 8.15732 15.3742 8.02731 13H4.06189C4.458 16.1765 6.71639 18.7747 9.71002 19.6674ZM10.0307 13C10.1811 15.4388 10.8778 17.7297 12 19.752C13.1222 17.7297 13.8189 15.4388 13.9693 13H10.0307ZM19.9381 13H15.9727C15.8427 15.3742 15.2526 17.6259 14.29 19.6674C17.2836 18.7747 19.542 16.1765 19.9381 13ZM4.06189 11H8.02731C8.15732 8.62577 8.74743 6.37407 9.71002 4.33256C6.71639 5.22533 4.458 7.8235 4.06189 11ZM10.0307 11H13.9693C13.8189 8.56122 13.1222 6.27025 12 4.24799C10.8778 6.27025 10.1811 8.56122 10.0307 11ZM14.29 4.33256C15.2526 6.37407 15.8427 8.62577 15.9727 11H19.9381C19.542 7.8235 17.2836 5.22533 14.29 4.33256Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="footer-features__title">50+ Destinations</h3>
+                    <p class="footer-features__text">Explore amazing destinations across all continents</p>
+                </div>
+
+                <div class="footer-features__card">
+                    <div class="footer-features__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="footer-features__title">Safe & Secure</h3>
+                    <p class="footer-features__text">Travel with confidence with our safety guarantee</p>
+                </div>
+
+                <div class="footer-features__card">
+                    <div class="footer-features__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22 17.0022C21.999 19.8731 19.9816 22.2726 17.2872 22.8616L16.6492 20.9476C17.8532 20.7511 18.8765 20.0171 19.4649 19H17C15.8954 19 15 18.1046 15 17V13C15 11.8954 15.8954 11 17 11H19.9381C19.446 7.05369 16.0796 4 12 4C7.92038 4 4.55399 7.05369 4.06189 11H7C8.10457 11 9 11.8954 9 13V17C9 18.1046 8.10457 19 7 19H4C2.89543 19 2 18.1046 2 17V12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12V12.9987V13V17V17.0013V17.0022ZM20 17V13H17V17H20ZM4 13V17H7V13H4Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="footer-features__title">24/7 Support</h3>
+                    <p class="footer-features__text">Round-the-clock assistance whenever you need it</p>
+                </div>
+
+                <div class="footer-features__card">
+                    <div class="footer-features__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="5" x2="5" y2="19" />
+                            <circle cx="6.5" cy="6.5" r="2.5" />
+                            <circle cx="17.5" cy="17.5" r="2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="footer-features__title">Best Prices</h3>
+                    <p class="footer-features__text">Competitive rates with exclusive deals and offers</p>
+                </div>
+            </div>
+
+            <div class="footer-stats">
+                <div class="footer-stats__item">
+                    <div class="footer-stats__number">15000</div>
+                    <div class="footer-stats__label">HAPPY TRAVELERS</div>
+                </div>
+                <div class="footer-stats__item">
+                    <div class="footer-stats__number">127</div>
+                    <div class="footer-stats__label">COUNTRIES COVERED</div>
+                </div>
+                <div class="footer-stats__item">
+                    <div class="footer-stats__number">98</div>
+                    <div class="footer-stats__label">SATISFACTION RATE</div>
+                </div>
+                <div class="footer-stats__item">
+                    <div class="footer-stats__number">12</div>
+                    <div class="footer-stats__label">YEARS EXPERIENCE</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <script type="module" src="js/sync-components.js" defer></script>
+    <script type="module" src="js/scripts.js" defer></script>
+</body>
+
+
+</html>
