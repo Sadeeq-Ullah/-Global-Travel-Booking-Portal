@@ -71,3 +71,33 @@ setInterval(() => {
         radioindexing();
     }
 }, 5000);
+
+const statsSection = document.querySelector('.footer-stats');
+let hasAnimated = false;
+
+function startCounters() {
+    document.querySelectorAll('.footer-stats__number').forEach(counter => {
+        const target = +counter.dataset.target;
+        const duration = 2000;
+        let current = 0;
+        const step = target / (duration / 16);
+
+        function update() {
+            current += step;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(update);
+            } else {
+                counter.textContent = target;
+            }
+        }
+        update();
+    });
+}
+
+window.addEventListener('scroll', () => {
+    if (statsSection.getBoundingClientRect().top < window.innerHeight && !hasAnimated) {
+        startCounters();
+        hasAnimated = true;
+    }
+});
