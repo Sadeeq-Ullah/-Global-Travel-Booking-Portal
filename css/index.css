@@ -993,7 +993,7 @@ body.top-jump {
     transform: scale(1);
 }
 
-.main-footer {
+.pre-footer {
     background-image: linear-gradient(rgba(226, 110, 43, 0.9), rgba(226, 110, 43, 0.9)), url(../img/travel/showcase-1.webp);
     display: flex;
     justify-content: center;
@@ -1005,7 +1005,7 @@ body.top-jump {
     gap: 1.5rem;
 }
 
-.journey-start {
+.journey-cta {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1013,18 +1013,18 @@ body.top-jump {
     color: var(--primary-color);
 }
 
-.journey-start__description,
-.journey-start__heading {
+.journey-cta__description,
+.journey-cta__heading {
     text-align: center;
 }
 
-.journey-buttons {
+.journey-cta__buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.journey-start__exp-destinations {
+.journey-cta__btn--primary {
     text-transform: uppercase;
     border-radius: 40px;
     font-weight: bold;
@@ -1034,7 +1034,7 @@ body.top-jump {
     background-color: var(--primary-color);
 }
 
-.journey-start__plan {
+.journey-cta__btn--secondary {
     text-transform: uppercase;
     border-radius: 40px;
     border: 3px solid var(--primary-color);
@@ -1047,7 +1047,7 @@ body.top-jump {
     font-size: 1.1em;
 }
 
-.footer-features {
+.travel-features {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1055,7 +1055,7 @@ body.top-jump {
     gap: 1.5em;
 }
 
-.footer-features__card {
+.travel-features__card {
     display: flex;
     flex-direction: column;
     border-radius: 28px;
@@ -1067,14 +1067,14 @@ body.top-jump {
     gap: 1em;
 }
 
-.footer-features__icon {
+.travel-features__icon {
     width: 14%;
     position: relative;
     z-index: 1;
     color: var(--main-color);
 }
 
-.footer-features__icon:after {
+.travel-features__icon:after {
     content: "";
     width: 47%;
     top: -0.9em;
@@ -1087,11 +1087,11 @@ body.top-jump {
     border-radius: 50%;
 }
 
-.footer-features__text {
+.travel-features__text {
     align-self: center;
 }
 
-.footer-stats {
+.travel-stats {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1103,13 +1103,13 @@ body.top-jump {
     flex-wrap: wrap;
 }
 
-.footer-stats__item { 
+.travel-stats__item { 
     flex: 1;
     min-width: 200px;
     padding: 20px;
 }
 
-.footer-stats__number {
+.travel-stats__number {
     font-size: 48px;
     font-weight: 700;
     display: flex;
@@ -1120,7 +1120,7 @@ body.top-jump {
     line-height: 1;
 }
 
-.footer-stats__label {
+.travel-stats__label {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.5px;
