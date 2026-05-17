@@ -1077,8 +1077,8 @@ body.top-jump {
 .travel-features__icon:after {
     content: "";
     width: 47%;
-    top: -0.9em;
-    left: -0.9em;
+    top: -1em;
+    left: -1em;
     z-index: -1;
     padding: 1.7em;
     position: absolute;
