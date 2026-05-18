@@ -1127,8 +1127,55 @@ body.top-jump {
     margin-top: 8px;
 }
 
-.footer {
-    /* background-color: black; */
-    /* color: white; */
-    
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: black;
+    padding: 15px;
+    color: var(--primary-color);
+}
+
+.footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.footer__description {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 1em;
+    line-height: 1em;
+    letter-spacing: 1px;
+}
+
+.footer__newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: center;
+    align-items: center;
+} 
+
+.footer__form-group {
+    display: flex;
+}
+
+.footer__input {
+    padding: 1.2em;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    color: var(--primary-color);
+    background-color: #323232;
+    width: 300px; 
+}
+
+.footer__button {
+    padding: 1.2em;
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0 30px 0 30px;
+    cursor: pointer;
 }
