@@ -25,6 +25,15 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("add-background", window.scrollY > 20);
 });
 
+window.addEventListener("scroll", () => {
+    const scrollBtn = document.querySelector(".page-scrolled");
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = "flex";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+
 const slider = document.querySelector(".testimonials__track");
 const testiCard = document.querySelectorAll(".testimonial-card"); 
 const firstCard = testiCard[0];
