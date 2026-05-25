@@ -1,3 +1,7 @@
+/* ========================================
+   GLOBAL STYLES & CSS VARIABLES
+   ======================================== */
+
 * {
     padding: 0;
     margin: 0;
@@ -7,15 +11,45 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {
+    /* Font Sizes */
     --max-font-size: 1.5em;
     --min-font-size: 0.5em;
     --mid-font-size: 1em;
+
+    /* Primary Colors */
     --main-color: rgb(226, 110, 43);
     --primary-color: white;
+
+    /* Secondary Colors */
+    --bg-light: rgb(238, 224, 206);
+    --border-gray: rgb(102, 102, 102);
+    --text-gray: rgb(70 62 62);
+    --gray-medium: rgb(156, 156, 156);
+    --orange-light: rgb(243, 210, 166);
+    --overlay-dark: rgba(29, 28, 28, 0.815);
+    --dark-bg: #031013;
+    --dark-bg-secondary: #052229;
+    --input-bg: #323232;
+    --black-text: #000000;
+
+    /* Border Radius */
+    --radius-small: 7px;
+    --radius-medium: 12px;
+    --radius-large: 20px;
+    --radius-xlarge: 23px;
+    --radius-pill: 30px;
+    --radius-round: 40px;
+    --radius-full: 50%;
+    --radius-badge: calc(2rem - 2px);
 }
+
+/* ========================================
+   HERO & HEADER SECTION
+   ======================================== */
 
 #header {
     display: flex;
@@ -29,6 +63,10 @@ html {
     z-index: 1000;
     background: transparent;
     transition: background-color 0.3s ease;
+}
+
+#header.add-background {
+    background-image: linear-gradient(var(--overlay-dark));
 }
 
 .major-container {
@@ -45,27 +83,27 @@ html {
     justify-content: center;
 }
 
-#header.add-background {
-    background-image: linear-gradient(rgba(29, 28, 28, 0.815));
-}
-
 .header__heading a {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 1.7rem;
-    color: var(--primary-color);
 }
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
 
 .header__nav-list {
     display: flex;
     position: fixed;
     list-style: none;
-    background-color: white;
-    padding: 5em 2em 7em 2em;
-    width: 96%;
+    background-color: var(--primary-color);
+    width: 90%; 
+    padding: 5em 1.5em 7em 1.5em;
     max-height: calc(100vh - 2em);
     overflow-y: auto;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
+    box-sizing: border-box;
     height: 100%;
     top: 1em;
     right: 7px;
@@ -108,7 +146,7 @@ body.top-jump {
 
 .header__nav-list .header__nav-item a {
     text-decoration: none;
-    color: #000000;
+    color: var(--black-text);
     font-weight: 700;
     cursor: pointer;
 }
@@ -118,7 +156,7 @@ body.top-jump {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    color: #000000;
+    color: var(--black-text);
     font-weight: 700;
     position: relative;
     cursor: pointer;
@@ -138,12 +176,12 @@ body.top-jump {
     content: "";
     width: 30px;
     height: 30px;
-    background-color: rgb(243, 210, 166);
+    background-color: var(--orange-light);
     position: absolute;
     right: -4px;
     top: 57%;
     transform: translateY(-55%);
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     z-index: -1;
 }
 
@@ -172,7 +210,7 @@ body.top-jump {
     font-weight: 700;
     background-color: var(--main-color);
     padding: 0.6em 1.2em;
-    border-radius: 7px;
+    border-radius: var(--radius-small);
 }
 
 .header__hamberger-menu__icon {
@@ -181,6 +219,10 @@ body.top-jump {
     cursor: pointer;
     color: var(--primary-color);
 }
+
+/* ========================================
+   HERO CONTENT
+   ======================================== */
 
 .hero,
 .hero__left {
@@ -216,7 +258,7 @@ body.top-jump {
     font-size: 1em;
     background-color: var(--main-color);
     padding: 1.3em 2em;
-    border-radius: 40px;
+    border-radius: var(--radius-round);
     font-weight: 700;
 }
 
@@ -225,7 +267,7 @@ body.top-jump {
     color: var(--main-color);
     font-size: 1em;
     padding: 1.1em 2em;
-    border-radius: 40px;
+    border-radius: var(--radius-round);
     font-weight: 900;
     border: 2px solid var(--main-color);
 }
@@ -234,14 +276,18 @@ body.top-jump {
     width: 100%;
 }
 
+/* ========================================
+   FORM SECTION
+   ======================================== */
+
 .form-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(29, 28, 28, 0.815));
-    border-radius: 12px;
+    background-image: linear-gradient(var(--overlay-dark));
+    border-radius: var(--radius-medium);
     padding: 1.5em;
     margin: 1em;
 }
@@ -262,10 +308,10 @@ body.top-jump {
 
 .form-field input {
     padding: 1rem 1.4rem;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     color: var(--primary-color);
     background-color: transparent;
-    border: 1px solid rgb(102, 102, 102);
+    border: 1px solid var(--border-gray);
 }
 
 .form-field input::placeholder {
@@ -289,11 +335,15 @@ body.top-jump {
     background-color: var(--main-color);
     color: var(--primary-color);
     padding: 1.2em 2em;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     border: none;
     width: 100%;
     cursor: pointer;
 }
+
+/* ========================================
+   ABOUT US SECTION
+   ======================================== */
 
 .about-us {
     display: flex;
@@ -308,15 +358,15 @@ body.top-jump {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border: 1px solid rgb(102, 102, 102);
-    border-radius: 12px;
+    border: 1px solid var(--border-gray);
+    border-radius: var(--radius-medium);
     padding: 1.8em;
 }
 
 .about-us__label {
     color: var(--main-color);
-    background-color: rgb(238, 224, 206);
-    border-radius: 50px;
+    background-color: var(--bg-light);
+    border-radius: var(--radius-round);
     padding: 0.7em 0.6em;
     text-align: center;
     width: 43%;
@@ -352,7 +402,7 @@ body.top-jump {
     width: 9%;
     height: 48%;
     background-color: var(--main-color);
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     top: 0;
     left: -2.5em;
     position: absolute;
@@ -370,23 +420,20 @@ body.top-jump {
     position: relative;
 }
 
-.award-winner {
-    position: absolute;
-    top: 0;
-}
-
-
-
 .about-us__image .about-us__travelimg {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
 }
+
+/* ========================================
+   AWARD & RATING CARDS
+   ======================================== */
 
 .award-winner {
     background-color: var(--primary-color);
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     padding: 1em;
     position: absolute;
     right: 2em;
@@ -418,9 +465,9 @@ body.top-jump {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     padding: 1.2em 1.6em;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.12),
         0 10px 12px rgba(0, 0, 0, 0.08);
@@ -431,7 +478,7 @@ body.top-jump {
     width: 35%;
     height: 35%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
 }
 
 .rating__content {
@@ -452,6 +499,10 @@ body.top-jump {
     margin-left: 15px;
 }
 
+/* ========================================
+   WHY CHOOSE US SECTION
+   ======================================== */
+
 .why-choose-us {
     display: flex;
     flex-direction: column;
@@ -470,21 +521,12 @@ body.top-jump {
 
 .why-choose-us__label {
     color: var(--main-color);
-    background-color: rgb(238, 224, 206);
-    border-radius: 50px;
+    background-color: var(--bg-light);
+    border-radius: var(--radius-round);
     padding: 0.6em;
     text-align: center;
     width: 58%;
     font-size: 1em;
-}
-
-.why-choose-us__description,
-.why-choose-us__line,
-.travel-decision__description {
-    font-size: 0.9em;
-    letter-spacing: 1.2px;
-    line-height: 1.6em;
-    text-align: center;
 }
 
 .why-choose-us__features {
@@ -509,7 +551,7 @@ body.top-jump {
 }
 
 .feature__icon svg {
-    width: 2em;
+    width: 1.7em;
     height: 2em;
     display: block;
 }
@@ -523,19 +565,23 @@ body.top-jump {
     padding: 1.7em;
     position: absolute;
     height: 20%;
-    background-color: rgb(238, 224, 206);
-    border-radius: 50%;
+    background-color: var(--bg-light);
+    border-radius: var(--radius-full);
 }
 
 .feature__description {
     text-align: center;
 }
 
+/* ========================================
+   FEATURED DESTINATIONS SECTION
+   ======================================== */
+
 .featured-destinations {
     display: flex;
     margin: 5em 0;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 15px;
     flex-direction: column;
     gap: 1em;
@@ -545,7 +591,7 @@ body.top-jump {
     letter-spacing: 1.2px;
     line-height: 1.6em;
     align-self: flex-start;
-    color: rgb(70 62 62);
+    color: var(--text-gray);
 }
 
 .featured-destinations__grid {
@@ -555,13 +601,17 @@ body.top-jump {
     gap: 1.5rem;
 }
 
+/* ========================================
+   DESTINATION CARDS
+   ======================================== */
+
 .destination {
     display: flex;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     box-shadow:
         0 0px 0px rgba(0, 0, 0, 0.10),
         0 10px 12px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     border: 1px solid rgba(0, 0, 0, 0.03);
     flex-direction: column;
     gap: 2rem;
@@ -573,7 +623,7 @@ body.top-jump {
 
 .destination__image {
     width: 100%;
-    border-radius: 23px 23px 0 0;
+    border-radius: var(--radius-xlarge) var(--radius-xlarge) 0 0;
 }
 
 .destination__badge {
@@ -582,7 +632,7 @@ body.top-jump {
     color: var(--primary-color);
     background-color: var(--main-color);
     padding: 0.3rem 1.4em;
-    border-radius: calc(2rem - 2px);
+    border-radius: var(--radius-badge);
     margin: 1rem;
     text-align: center;
     left: 0;
@@ -605,11 +655,11 @@ body.top-jump {
 }
 
 .destination__tag {
-    background-color: rgb(238, 224, 206);
+    background-color: var(--bg-light);
     color: var(--main-color);
     padding: 0.3em 1.4em;
     text-align: center;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
 }
 
 .destination__footer {
@@ -623,7 +673,7 @@ body.top-jump {
     padding: 0.6em;
     border: 1px solid #949191;
     text-align: center;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
     color: var(--main-color);
 }
 
@@ -632,6 +682,10 @@ body.top-jump {
     background-color: var(--main-color);
 }
 
+/* ========================================
+   TRAVEL DECISION SECTION
+   ======================================== */
+
 .travel-decision {
     display: flex;
     flex-direction: column;
@@ -639,8 +693,15 @@ body.top-jump {
     gap: 1em;
     align-items: center;
     padding: 1.5em;
-    background-color: rgb(238, 224, 206);
-    border-radius: 12px;
+    background-color: var(--bg-light);
+    border-radius: var(--radius-medium);
+}
+
+.travel-decision__description {
+    font-size: 0.9em;
+    letter-spacing: 1.2px;
+    line-height: 1.6em;
+    text-align: center;
 }
 
 .travel-decision__buttons {
@@ -653,21 +714,27 @@ body.top-jump {
 
 .travel-decision__view-button {
     width: 80%;
+    text-decoration: none;
     padding: 0.6em;
     text-align: center;
     background-color: var(--main-color);
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
     color: var(--primary-color);
 }
 
 .travel-decision__talk-button {
     width: 80%;
+    text-decoration: none;
     padding: 0.6em;
     border: 2px solid var(--main-color);
     text-align: center;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
     color: var(--main-color);
 }
+
+/* ========================================
+   FEATURED TOURS SECTION
+   ======================================== */
 
 .featured-tours {
     display: flex;
@@ -686,7 +753,7 @@ body.top-jump {
 .testimonials__subtitle {
     position: relative;
     letter-spacing: 1.2px;
-    color: rgb(70 62 62);
+    color: var(--text-gray);
 }
 
 .featured-tours__subtitle::after {
@@ -706,6 +773,10 @@ body.top-jump {
     gap: 1.5em;
 }
 
+/* ========================================
+   TOURS CARDS
+   ======================================== */
+
 .tours-card {
     display: flex;
     flex-direction: column;
@@ -722,7 +793,7 @@ body.top-jump {
 .tours-card__image {
     width: 100%;
     filter: brightness(0.5);
-    border-radius: 20px;
+    border-radius: var(--radius-large);
     object-fit: cover;
     height: 37vh;
 }
@@ -731,6 +802,8 @@ body.top-jump {
     position: absolute;
     display: flex;
     flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.3s ease;
     gap: 0.5em;
     padding: 0 0.7em 0 0.7em;
 }
@@ -751,7 +824,7 @@ body.top-jump {
     color: var(--primary-color);
     background-color: var(--main-color);
     padding: 0.3rem;
-    border-radius: calc(2rem - 2px);
+    border-radius: var(--radius-badge);
     margin: 1rem;
     text-align: center;
     width: 33%;
@@ -798,7 +871,7 @@ body.top-jump {
     font-weight: 700;
     background-color: var(--main-color);
     text-align: center;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
     display: block;
     color: var(--primary-color);
 }
@@ -830,7 +903,7 @@ body.top-jump {
     top: 2.3em;
     background-color: var(--primary-color);
     padding: 0.7rem 1em;
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
     margin: 1rem;
     text-align: center;
     left: 0;
@@ -845,8 +918,12 @@ body.top-jump {
     text-align: center;
     background-color: var(--main-color);
     margin: 1.5em;
-    border-radius: 40px;
+    border-radius: var(--radius-round);
 }
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
 
 .testimonials__header {
     padding: 2em 1em;
@@ -928,7 +1005,7 @@ body.top-jump {
 }
 
 .testimonial-card__role {
-    color: rgb(156, 156, 156);
+    color: var(--gray-medium);
     margin: 0.5em 0;
     display: block;
 }
@@ -946,7 +1023,7 @@ body.top-jump {
 
 .testimonial-card__avatar {
     width: 100%;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     object-fit: cover;
     margin-top: 3em;
 }
@@ -975,7 +1052,7 @@ body.top-jump {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     outline: none;
     cursor: pointer;
     display: inline-flex;
@@ -988,7 +1065,7 @@ body.top-jump {
     content: "";
     width: 15px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     transform: scale(0);
     transition: 0.2s transform ease-in-out;
     background-color: var(--main-color);
@@ -997,6 +1074,10 @@ body.top-jump {
 .radio-buttons input[type="radio"]:checked::before {
     transform: scale(1);
 }
+
+/* ========================================
+   PRE-FOOTER & JOURNEY CTA SECTION
+   ======================================== */
 
 .pre-footer {
     background-image: linear-gradient(rgba(226, 110, 43, 0.9), rgba(226, 110, 43, 0.9)), url(../img/travel/showcase-1.webp);
@@ -1031,7 +1112,7 @@ body.top-jump {
 
 .journey-cta__btn--primary {
     text-transform: uppercase;
-    border-radius: 40px;
+    border-radius: var(--radius-round);
     font-weight: bold;
     padding: 1.3em 2em;
     color: var(--main-color);
@@ -1041,7 +1122,7 @@ body.top-jump {
 
 .journey-cta__btn--secondary {
     text-transform: uppercase;
-    border-radius: 40px;
+    border-radius: var(--radius-round);
     border: 3px solid var(--primary-color);
     font-weight: bold;
     text-align: center;
@@ -1051,6 +1132,10 @@ body.top-jump {
     padding: 1.1em;
     font-size: 1.1em;
 }
+
+/* ========================================
+   TRAVEL FEATURES SECTION
+   ======================================== */
 
 .travel-features {
     display: flex;
@@ -1089,12 +1174,16 @@ body.top-jump {
     position: absolute;
     height: 45%;
     background-color: var(--primary-color);
-    border-radius: 50%;
+    border-radius: var(--radius-full);
 }
 
 .travel-features__text {
     align-self: center;
 }
+
+/* ========================================
+   TRAVEL STATS SECTION
+   ======================================== */
 
 .travel-stats {
     display: flex;
@@ -1132,11 +1221,15 @@ body.top-jump {
     margin-top: 8px;
 }
 
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
+
 .footer__container {
     display: flex;
     flex-direction: column;
     gap: 3.5em;
-    background-color: #031013;
+    background-color: var(--dark-bg);
     padding: 15px;
     color: var(--primary-color);
 }
@@ -1170,10 +1263,10 @@ body.top-jump {
 
 .footer__input {
     padding: 1.2em;
-    border-radius: 30px 0 0 30px;
+    border-radius: var(--radius-pill) 0 0 var(--radius-pill);
     border: none;
     color: var(--primary-color);
-    background-color: #323232;
+    background-color: var(--input-bg);
     width: 300px;
 }
 
@@ -1182,7 +1275,7 @@ body.top-jump {
     background-color: var(--main-color);
     color: var(--primary-color);
     border: none;
-    border-radius: 0 30px 30px 0px;
+    border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
     width: 60px;
     cursor: pointer;
 }
@@ -1271,7 +1364,7 @@ body.top-jump {
 .contact-icon-wrapper::after {
     content: "";
     width: 2.7em;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     height: 2.7em;
     background-color: rgb(226 110 43 / 19%);
     position: absolute;
@@ -1300,6 +1393,8 @@ body.top-jump {
     color: var(--primary-color);
     text-decoration: none;
     font-size: 1.5em;
+    position: relative;
+    z-index: 1;
 }
 
 .footer__social-link svg {
@@ -1307,15 +1402,10 @@ body.top-jump {
     height: 25px;
 }
 
-.footer__social-link {
-    position: relative;
-    z-index: 1;
-}
-
 .footer__social-link::after {
     content: "";
     width: 1.9em;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     height: 1.9em;
     background-color: rgb(229 226 224 / 13%);
     position: absolute;
@@ -1324,8 +1414,8 @@ body.top-jump {
 }
 
 .footer__bottom {
-    border-top: 1px solid rgb(156, 156, 156);
-    background-color: #052229;
+    border-top: 1px solid var(--gray-medium);
+    background-color: var(--dark-bg-secondary);
     padding: 1.5em;
 }
 
@@ -1358,10 +1448,14 @@ body.top-jump {
     color: var(--main-color)
 }
 
+/* ========================================
+   SCROLL TO TOP BUTTON
+   ======================================== */
+
 .page-scrolled {
     width: 18%;
     height: 8%;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     background-color: var(--main-color);
     position: fixed;
     right: 20px;
@@ -1379,24 +1473,23 @@ body.top-jump {
     color: var(--primary-color);
 }
 
-@media screen and (min-width: 786px) {
+/* ========================================
+   MEDIA QUERIES - Tab (768px+)
+   ======================================== */
+
+@media screen and (min-width: 768px) {
     .page-scrolled {
-        width: 10%;
+        width: 9.7%;
         height: 6.5%;
     }
 
     .hero,
     .hero__left {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 3.5em;
-        color: var(--primary-color);
     }
 
     .hero__title {
         text-align: left;
-        margin: 1em;
         font-size: 2.9rem;
     }
 
@@ -1410,57 +1503,25 @@ body.top-jump {
     }
 
     .hero__buttons {
-        display: flex;
         padding: 0 40px;
         justify-content: flex-start;
-        align-items: flex-start;
-        gap: 1em;
     }
 
-
     .form-section {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient(rgba(29, 28, 28, 0.815));
-        border-radius: 12px;
-        padding: 1.5em;
         margin: 4rem 8rem 4rem 2rem;
     }
 
-    .form-section .form-field {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 0.2em;
-    }
-
     .form-section .form-row {
-        width: 100%;
-        display: flex;
         flex-direction: row;
-        gap: 1em;
     }
-
 
     .about-us {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
         margin: 3rem 3rem 0 3rem;
         width: 80%;
-        height: 100%;
     }
 
     .about-us__content {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
         border: 1px solid rgb(102 102 102 / 27%);
-        border-radius: 12px;
-        padding: 1.8em;
     }
 
     .about-us__title {
@@ -1469,11 +1530,6 @@ body.top-jump {
     }
 
     .about-us__label {
-        color: var(--main-color);
-        background-color: rgb(238, 224, 206);
-        border-radius: 50px;
-        padding: 0.7em 0.6em;
-        text-align: center;
         width: 26%;
         font-size: 1.2em;
     }
@@ -1484,49 +1540,22 @@ body.top-jump {
     .destination__description {
         font-size: 1rem;
         letter-spacing: 1px;
-        line-height: 1.6em;
-    }
-
-    .about-us__list {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        padding-left: 2.3em;
     }
 
     .about-us__list li {
-        position: relative;
         font-size: 1rem;
         letter-spacing: 1px;
-        line-height: 1.6em;
-        list-style: none;
     }
 
     .about-us__list li::before {
-        content: "";
         width: 4%;
         height: 84%;
-        background-color: var(--main-color);
-        border-radius: 50%;
         top: 2px;
-        left: -2.5em;
-        position: absolute;
-    }
-
-    .about-us__list li::after {
-        content: "✓";
-        color: var(--primary-color);
-        position: absolute;
-        top: 0;
-        left: -2.1em;
     }
 
     .about-us__image .about-us__travelimg {
-        width: 100%;
         height: 35vh;
-        object-fit: cover;
         position: relative;
-        border-radius: 12px;
     }
 
     .award-winner {
@@ -1540,4 +1569,183 @@ body.top-jump {
         bottom: -1.5em;
     }
 
+    .why-choose-us {
+        padding: 5rem;
+    }
+
+    .why-choose-us__label {
+        width: 40%;
+        font-weight: bolder;
+    }
+
+    .why-choose-us__heading {
+        font-size: 2.3rem;
+    }
+
+    .why-choose-us__description,
+    .why-choose-us__line,
+    .travel-decision__description {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .why-choose-us__features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-destinations__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem;
+    }
+
+    .Discover-morebtn {
+        width: 38%;
+        margin: 0 auto;
+    }
+
+    .destination__footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destination__explore {
+        width: 37%;
+    }
+
+    .travel-decision__buttons {
+        flex-direction: row;
+    }
+
+    .travel-decision__view-button {
+        width: 24%;
+    }
+
+    .travel-decision__talk-button {
+        width: 28%;
+    }
+
+    .tours-card__image {
+        height: 29vh;
+    }
+
+    .featured-tours__subtitle::after {
+        height: 2px;
+        top: 9px;
+    }
+
+    .featured-tours__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 3rem;
+    }
+
+    .tours-card {
+        border-radius: var(--radius-medium);
+        transition: transform 0.3s ease;
+    }
+
+    .tours-card__image {
+        filter: brightness(1);
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .tours-card__overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .tours-card:hover,
+    .tours-card:focus-within,
+    .tours-card:active {
+        transform: scale(1);
+    }
+
+    .tours-card:hover .tours-card__image,
+    .tours-card:focus-within .tours-card__image,
+    .tours-card:active .tours-card__image {
+        transform: scale(1.08);
+        filter: brightness(0.5);
+    }
+
+    .tours-card:hover .tours-card__overlay,
+    .tours-card:focus-within .tours-card__overlay,
+    .tours-card:active .tours-card__overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .journey-cta {
+        gap: 1rem;
+    }
+
+    .journey-cta__heading {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin: 1rem 5rem;
+    }
+
+    .journey-cta__description {
+        line-height: 1.6rem;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+
+    .journey-cta__buttons {
+        flex-direction: row;
+        width: 60%;
+        margin: 2rem;
+    }
+
+    .journey-cta__btn--secondary {
+        width: 38%;
+    }
+
+    .travel-features {
+        display: grid;
+        margin: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .travel-features__card {
+        transition: transform 0.3s ease;
+    }
+
+    .travel-features__card:focus-within,
+    .travel-features__card:hover,
+    .travel-features__card:active {
+        transform: translateY(-7%);
+    }
+
+    .travel-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 5rem;
+        gap: 3rem;
+    }
+
+    .footer__description {
+        text-align: start;
+    }
+
+    .footer__newsletter {
+        align-items: flex-start;
+        margin: 1rem 0;
+    }
+
+    .footer__container {
+        padding: 2rem 4rem;
+    }
+
+    .footer__input {
+        width: 445px;
+    }
+
+    .shared__column {
+        gap: 10rem;
+        justify-content: normal;
+    }
 }
