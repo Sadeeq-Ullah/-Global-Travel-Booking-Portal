@@ -13,7 +13,7 @@ document.addEventListener("componentsLoaded", () => {
             navlist.classList.remove("close-menu");
             document.body.classList.remove('no-scroll');
         }
-        if (e.target.closest(".header__dropdown-menu")) {
+        if (window.innerWidth < 1024 && e.target.closest(".header__dropdown-menu")) {
             dropdownList.classList.toggle("open");
             dropdown.classList.toggle("active-color");
             dropdownicon.classList.toggle("rotated");
@@ -22,6 +22,7 @@ document.addEventListener("componentsLoaded", () => {
 });
 
 window.addEventListener("scroll", () => {
+    const header = document.querySelector("#header");
     header.classList.toggle("add-background", window.scrollY > 20);
 });
 
@@ -35,7 +36,7 @@ window.addEventListener("scroll", () => {
 });
 
 const slider = document.querySelector(".testimonials__track");
-const testiCard = document.querySelectorAll(".testimonial-card"); 
+const testiCard = document.querySelectorAll(".testimonial-card");
 const firstCard = testiCard[0];
 const lastCard = testiCard[testiCard.length - 1];
 slider.prepend(lastCard.cloneNode(true));
@@ -92,7 +93,7 @@ function startCounters() {
         const step = target / (duration / 16);
 
         function update() {
-            current += step;  
+            current += step;
             if (current < target) {
                 counter.textContent = Math.floor(current);
                 requestAnimationFrame(update);
