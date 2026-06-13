@@ -167,3 +167,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+const filter = document.querySelectorAll(".filter-nav button")
+const cardsgrid = document.querySelectorAll("article")
+if (filter && filter[0] && cardsgrid) {
+    filter.forEach(region => {
+        region.addEventListener("click", (event) => {
+            let region_name = region.innerText.toLowerCase().trim();
+
+            filter.forEach(btn => btn.classList.remove("navbar-btn"));
+
+            region.classList.add("navbar-btn");
+
+            cardsgrid.forEach(card => {
+                let raw_region = card.getAttribute("data-region");
+                if (!raw_region) return;
+
+                let card_region = raw_region.toLowerCase().trim();
+
+                if (region_name === "all" || region_name === card_region) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+    filter[0].click();
+}

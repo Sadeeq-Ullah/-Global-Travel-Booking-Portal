@@ -89,33 +89,22 @@
         </section>
 
         <!-- Top Bar / Filter Navigation -->
-        <nav class="filter-nav" aria-label="Destination filters">
+        <nav class="filter-nav">
             <ul class="filter-nav__list">
                 <li class="filter-nav__item">
-                    <button class="filter-nav__btn filter-nav__btn--active" data-filter="all"
-                        aria-label="Show all destinations">
-                        All
-                    </button>
+                    <button class="filter-btn">All</button>
                 </li>
                 <li class="filter-nav__item">
-                    <button class="filter-nav__btn" data-filter="asia" aria-label="Show Asian destinations">
-                        Asia
-                    </button>
+                    <button class="filter-btn">Asia</button>
                 </li>
                 <li class="filter-nav__item">
-                    <button class="filter-nav__btn" data-filter="europe" aria-label="Show European destinations">
-                        Europe
-                    </button>
+                    <button class="filter-btn">Europe</button>
                 </li>
                 <li class="filter-nav__item">
-                    <button class="filter-nav__btn" data-filter="africa" aria-label="Show African destinations">
-                        Africa
-                    </button>
+                    <button class="filter-btn">Africa</button>
                 </li>
                 <li class="filter-nav__item">
-                    <button class="filter-nav__btn" data-filter="americas" aria-label="Show American destinations">
-                        Americas
-                    </button>
+                    <button class="filter-btn">Americas</button>
                 </li>
             </ul>
         </nav>
@@ -126,7 +115,8 @@
             <!-- Featured Card - Europe -->
             <article class="card card--featured" data-region="europe">
                 <div class="card__image">
-                    <img src="./img/travel/destination-2.webp" alt="Paris, France" loading="lazy">
+                    <img src="./img/travel/destination-2.webp" alt="Paris, France" loading="lazy"
+                        class="main-image card--featured">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--featured">FEATURED</span>
@@ -134,8 +124,18 @@
                     <p class="card__description">City of lights and romance with iconic landmarks and world-class
                         museums</p>
                     <div class="card__footer">
-                        <span class="card__tours">15 Tours</span>
-                        <span class="card__price">From $1,299</span>
+                        <div class="twin-texts">
+                            <div class="card__tours">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z">
+                                    </path>
+                                </svg>
+                                15 Tours
+                            </div>
+                            <div class="card__price card__price--long">From $1,299</div>
+                        </div>
                         <a href="#" class="card__link" aria-label="Explore Paris tours">Explore Now →</a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
             <!-- Popular Card - Asia -->
             <article class="card card--popular" data-region="asia">
                 <div class="card__image">
-                    <img src="./img/travel/destination-4.webp" alt="Bali, Indonesia" loading="lazy">
+                    <img src="./img/travel/destination-4.webp" alt="Bali, Indonesia" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--popular">POPULAR</span>
@@ -152,8 +152,10 @@
                     <p class="card__description card__description--short">Tropical paradise with lush jungles and
                         pristine beaches</p>
                     <div class="card__footer">
-                        <span class="card__price card__price--large">$899</span>
-                        <a href="#" class="card__link" aria-label="Explore Bali tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">8 Tours</div>
+                            <div class="card__price card__price--large">$899</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -161,7 +163,7 @@
             <!-- Adventure Card - Americas -->
             <article class="card card--adventure" data-region="americas">
                 <div class="card__image">
-                    <img src="./img/travel/destination-6.webp" alt="Costa Rica" loading="lazy">
+                    <img src="./img/travel/destination-6.webp" alt="Costa Rica" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--adventure">ADVENTURE</span>
@@ -169,8 +171,10 @@
                     <p class="card__description card__description--short">Rainforests, volcanoes, and breathtaking
                         wildlife</p>
                     <div class="card__footer">
-                        <span class="card__price card__price--large">$1,199</span>
-                        <a href="#" class="card__link" aria-label="Explore Costa Rica tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">6 Tours</div>
+                            <div class="card__price card__price--large">$1,199</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -178,7 +182,7 @@
             <!-- Culture Card - Africa -->
             <article class="card card--culture" data-region="africa">
                 <div class="card__image">
-                    <img src="./img/travel/destination-8.webp" alt="Cairo, Egypt" loading="lazy">
+                    <img src="./img/travel/destination-8.webp" alt="Cairo, Egypt" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--culture">CULTURE</span>
@@ -186,8 +190,10 @@
                     <p class="card__description card__description--short">Ancient pyramids and timeless Egyptian
                         heritage</p>
                     <div class="card__footer">
-                        <span class="card__price card__price--large">$1,499</span>
-                        <a href="#" class="card__link" aria-label="Explore Cairo tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">7 Tours</div>
+                            <div class="card__price card__price--large">$1,499</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -195,7 +201,7 @@
             <!-- Luxury Card - Asia -->
             <article class="card card--luxury" data-region="asia">
                 <div class="card__image">
-                    <img src="./img/travel/destination-9.webp" alt="Singapore" loading="lazy">
+                    <img src="./img/travel/destination-9.webp" alt="Singapore" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--luxury">LUXURY</span>
@@ -203,8 +209,10 @@
                     <p class="card__description card__description--short">Ultra-modern city with world-class dining and
                         shopping</p>
                     <div class="card__footer">
-                        <span class="card__price card__price--large">$1,799</span>
-                        <a href="#" class="card__link" aria-label="Explore Singapore tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">12 Tours</div>
+                            <div class="card__price card__price--large">$1,799</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -212,7 +220,8 @@
             <!-- Romantic Card - Europe -->
             <article class="card card--romantic" data-region="europe">
                 <div class="card__image">
-                    <img src="./img/travel/destination-10.webp" alt="Santorini, Greece" loading="lazy">
+                    <img src="./img/travel/destination-10.webp" alt="Santorini, Greece" loading="lazy"
+                        class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--romantic">ROMANTIC</span>
@@ -220,9 +229,17 @@
                     <p class="card__description">Stunning sunsets and white-washed buildings overlooking the Aegean Sea
                     </p>
                     <div class="card__footer">
-                        <span class="card__tours">10 Tours</span>
-                        <span class="card__price">From $1,599</span>
-                        <a href="#" class="card__link" aria-label="Explore Santorini tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853ZM18.827 6.1701C17.3279 4.66794 14.9076 4.60701 13.337 6.01687L12.0019 7.21524L10.6661 6.01781C9.09098 4.60597 6.67506 4.66808 5.17157 6.17157C3.68183 7.66131 3.60704 10.0473 4.97993 11.6232L11.9999 18.6543L19.0201 11.6232C20.3935 10.0467 20.319 7.66525 18.827 6.1701Z">
+                                    </path>
+                                </svg> 10 Tours
+                            </div>
+                            <div class="card__price card__price--long">From $1,599</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -230,16 +247,24 @@
             <!-- Vibrant Card - Americas -->
             <article class="card card--vibrant" data-region="americas">
                 <div class="card__image">
-                    <img src="./img/travel/destination-12.webp" alt="Rio de Janeiro" loading="lazy">
+                    <img src="./img/travel/destination-12.webp" alt="Rio de Janeiro" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--vibrant">VIBRANT</span>
                     <h3 class="card__title">Rio de Janeiro</h3>
                     <p class="card__description">Spectacular beaches, vibrant culture, and iconic Christ statue</p>
                     <div class="card__footer">
-                        <span class="card__tours">9 Tours</span>
-                        <span class="card__price">From $1,799</span>
-                        <a href="#" class="card__link" aria-label="Explore Rio tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+                                    </path>
+                                </svg> 9 Tours
+                            </div>
+                            <div class="card__price">From $1,799</div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -247,7 +272,7 @@
             <!-- Scenic Card - Africa -->
             <article class="card card--scenic" data-region="africa">
                 <div class="card__image">
-                    <img src="./img/travel/destination-14.webp" alt="Cape Town" loading="lazy">
+                    <img src="./img/travel/destination-14.webp" alt="Cape Town" loading="lazy" class="main-image">
                 </div>
                 <div class="card__content">
                     <span class="card__badge card__badge--scenic">SCENIC</span>
@@ -255,14 +280,29 @@
                     <p class="card__description">Dramatic mountains, pristine beaches, and world-renowned wine regions
                     </p>
                     <div class="card__footer">
-                        <span class="card__tours">11 Tours</span>
-                        <span class="card__price">From $1,699</span>
-                        <a href="#" class="card__link" aria-label="Explore Cape Town tours">Explore Now →</a>
+                        <div class="twin-texts">
+                            <div class="card__tours">
+                                <svg class="card-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M9.82843 5L7.82843 7H4V19H20V7H16.1716L14.1716 5H9.82843ZM9 3H15L17 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V6C2 5.44772 2.44772 5 3 5H7L9 3ZM12 18C8.96243 18 6.5 15.5376 6.5 12.5C6.5 9.46243 8.96243 7 12 7C15.0376 7 17.5 9.46243 17.5 12.5C17.5 15.5376 15.0376 18 12 18ZM12 16C13.933 16 15.5 14.433 15.5 12.5C15.5 10.567 13.933 9 12 9C10.067 9 8.5 10.567 8.5 12.5C8.5 14.433 10.067 16 12 16Z">
+                                    </path>
+                                </svg> 11 Tours
+                            </div>
+                            <div class="card__price">From $1,699</div>
+                        </div>
                     </div>
                 </div>
             </article>
-
         </div>
+            <!-- /Cards Grid Container -->
+
+        <article class="all-destinations">
+            <h1 class="all-destinations__heading">Ready to Start Your Journey?</h1>
+            <p class="all-destinations__description">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <a href="#" class="view-btn">View All Destinations →</a>
+        </article>
         <footer id="footer">
             <div class="footer__container">
                 <div class="footer__top">
@@ -418,13 +458,13 @@
             </div>
         </footer>
     </main>
-    <script type="module" src="js/scripts.js" defer></script>
     <a class="page-scrolled" href="#"><svg class="upper-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             fill="currentColor">
             <path
                 d="M13.0001 22.0003L11.0002 22.0004L11.0002 5.82845L7.05044 9.77817L5.63623 8.36396L12.0002 2L18.3642 8.36396L16.9499 9.77817L13.0002 5.8284L13.0001 22.0003Z">
             </path>
         </svg></a>
+    <script type="module" src="js/scripts.js" defer></script>
 </body>
 
 </html>
