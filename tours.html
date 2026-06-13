@@ -23,7 +23,7 @@
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="index.html">Home</a></li>
                     <li class="header__nav-item"><a href="about.html">About</a></li>
-                    <li class="header__nav-item"><a href="destinations.html">Destinations</a></li>
+                    <li class="header__nav-item"><a href="destinations.html">destinations</a></li>
                     <li class="header__nav-item"><a href="tours.html">Tours</a></li>
                     <li class="header__nav-item"><a href="gallery.html">Gallery</a></li>
                     <li class="header__nav-item"><a href="blog.html">Blog</a></li>
@@ -67,18 +67,542 @@
                 </svg>
             </div>
         </header>
-        <section class="destinations-hero">
-            <h1 class="destinations-hero__title">Tours</h1>
-            <p class="destinations-hero__description">
+        <section class="tours-hero">
+            <h1 class="tours-hero__title">Tours</h1>
+            <p class="tours-hero__description">
                 Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
                 molestias.
             </p>
-            <div class="destinations-hero__main-pages">
+            <div class="tours-hero__main-pages">
                 <a class="coloured-page" href="index.html">Home</a>
                 <div class="slash-sign">/</div>
-                <a class="center-page" href="destinations.html">Tours</a>
+                <a class="center-page" href="tours.html">Tours</a>
             </div>
         </section>
+
+        <section class="tours-text">
+            <h1 class="tours-text__heading">Discover Your Next Adventure</h1>
+            <p class="tours-text__description">Curated travel experiences that transform journeys into unforgettable
+                stories. Filter by your preferences and find the perfect escape.</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-section__search">
+                <input class="filter-section__search-input" type="search" placeholder="Where would you like to go?"
+                    aria-label="Search tours">
+                <button class="filter-section__search-button" type="button" aria-label="Submit search"><svg
+                        class="search-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="filter-section__list">
+                <li class="filter-section__item"><button class="filter-section__button" type="button">All Tours</button>
+                </li>
+                <li class="filter-section__item"><button class="filter-section__button" type="button">Adventure</button>
+                </li>
+                <li class="filter-section__item"><button class="filter-section__button" type="button">Luxury</button>
+                </li>
+                <li class="filter-section__item"><button class="filter-section__button" type="button">Cultural</button>
+                </li>
+                <li class="filter-section__item"><button class="filter-section__button" type="button">Family</button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="journey-card">
+            <div class="card-image">
+                <img class="journey-image" src="./img/travel/showcase-8.webp" alt="New journey image">
+            </div>
+            <div class="journey-card__badge">Editor's Choice</div>
+
+            <h2 class="journey-card__title">Mystical Bhutan Journey</h2>
+
+            <p class="journey-card__description">
+                Discover the last Shangri-La with pristine monasteries,
+                dramatic mountain vistas, and ancient traditions preserved
+                in time.
+            </p>
+
+            <ul class="journey-card__details">
+                <li class="journey-card__detail-item">12 Days</li>
+                <li class="journey-card__detail-item">Max 8 People</li>
+                <li class="journey-card__detail-item rating"><span class="main-stars">★ ★ ★ ★ ★</span> 4.9</li>
+            </ul>
+
+            <div class="journey-card__price">
+                <span class="journey-card__price-label">From</span>
+                <span class="journey-card__price-value">$2,499</span>
+            </div>
+
+            <div class="journey-card__actions">
+                <a href="#" class="card__link--primary">Explore This Journey</a>
+                <a href="#" class="card__link--secondary">View Itinerary</a>
+            </div>
+        </section>
+
+        <section class="explore-interests">
+            <h2 class="explore-interests__heading">Explore by Interest</h2>
+            <ul class="explore-interests__list" role="list">
+                <li class="explore-interests__item">
+                    <img src="./img/travel/misc-3.webp" alt="" class="explore-interests__image">
+                    <div class="explore-interests__content">
+                        <span class="explore-interests__name">Mountain Adventures</span>
+                        <span class="explore-interests__count">24 tours</span>
+                    </div>
+                </li>
+                <li class="explore-interests__item">
+                    <img src="./img/travel/misc-7.webp" alt="" class="explore-interests__image">
+                    <div class="explore-interests__content">
+                        <span class="explore-interests__name">Cultural Heritage</span>
+                        <span class="explore-interests__count">18 tours</span>
+                    </div>
+                </li>
+                <li class="explore-interests__item">
+                    <img src="./img/travel/misc-11.webp" alt="" class="explore-interests__image">
+                    <div class="explore-interests__content">
+                        <span class="explore-interests__name">Coastal Escapes</span>
+                        <span class="explore-interests__count">32 tours</span>
+                    </div>
+                </li>
+                <li class="explore-interests__item">
+                    <img src="./img/travel/misc-11.webp" alt="" class="explore-interests__image">
+                    <div class="explore-interests__content">
+                        <span class="explore-interests__name">Wildlife Safari</span>
+                        <span class="explore-interests__count">16 tours</span>
+                    </div>
+                </li>
+                <li class="explore-interests__item">
+                    <img src="./img/travel/misc-2.webp" alt="" class="explore-interests__image">
+                    <div class="explore-interests__content">
+                        <span class="explore-interests__name">Urban Explorer</span>
+                        <span class="explore-interests__count">28 tours</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============================================================
+     ALL JOURNEYS SECTION
+     BEM naming: Block = tours-section / tour-card
+     data-category used by the filter JS
+     Images: replace src paths with your actual asset paths
+     ============================================================ -->
+
+        <section class="tours-section" aria-labelledby="tours-section-title">
+
+            <!-- ── Section Header ──────────────────────────────────────── -->
+            <div class="tours-section__top">
+                <h2 class="tours-section__title">All Journeys</h2>
+
+                <div class="tours-section__layout-btns" role="group" aria-label="Card layout options">
+
+                    <button class="tours-section__layout-btn tours-section__layout-btn--active" data-view="grid"
+                        aria-label="Switch to grid view" aria-pressed="true" type="button">
+                        <!-- Grid icon: 4 squares -->
+                        <svg class="tours-section__layout-icon" aria-hidden="true" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="8" height="8" rx="1.5" />
+                            <rect x="13" y="3" width="8" height="8" rx="1.5" />
+                            <rect x="3" y="13" width="8" height="8" rx="1.5" />
+                            <rect x="13" y="13" width="8" height="8" rx="1.5" />
+                        </svg>
+                    </button>
+
+                    <button class="tours-section__layout-btn" data-view="list" aria-label="Switch to list view"
+                        aria-pressed="false" type="button">
+                        <!-- List icon: 3 horizontal lines -->
+                        <svg class="tours-section__layout-icon" aria-hidden="true" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <line x1="3" y1="12" x2="21" y2="12" />
+                            <line x1="3" y1="18" x2="21" y2="18" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+            <!-- /tours-section__top -->
+
+
+            <!-- ── Cards Grid ───────────────────────────────────────────── -->
+            <div class="tours-section__list" id="tours-grid">
+
+
+                <!-- ── Card 1: Norwegian Fjords Explorer ─────────────────── -->
+                <article class="tour-card" data-category="adventure" aria-label="Norwegian Fjords Explorer tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/norwegian-fjords.jpg"
+                            alt="Kayaker paddling through the dramatic Norwegian fjords" loading="lazy" width="400"
+                            height="260" />
+                        <span class="tour-card__label">5 dates available</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Norwegian Fjords Explorer</h3>
+                        <p class="tour-card__text">
+                            Cruise through dramatic fjords and witness cascading waterfalls
+                            in one of nature's most spectacular theaters.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>8 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>Small Group</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.8</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 1,899 dollars per person">
+                                <strong class="tour-card__cost-value">$1,899</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Norwegian Fjords Explorer -->
+
+
+                <!-- ── Card 2: Moroccan Odyssey ───────────────────────────── -->
+                <article class="tour-card" data-category="luxury" aria-label="Moroccan Odyssey tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/moroccan-odyssey.jpg"
+                            alt="Two travellers exploring a traditional Moroccan riad" loading="lazy" width="400"
+                            height="260" />
+                        <span class="tour-card__label">Limited spots</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Moroccan Odyssey</h3>
+                        <p class="tour-card__text">
+                            Journey through ancient medinas, vast deserts, and vibrant markets
+                            in this sensory-rich adventure.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>10 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>Private Option</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.7</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 1,299 dollars per person">
+                                <strong class="tour-card__cost-value">$1,299</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Moroccan Odyssey -->
+
+
+                <!-- ── Card 3: Patagonia Wilderness ───────────────────────── -->
+                <article class="tour-card" data-category="adventure" aria-label="Patagonia Wilderness tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/patagonia-wilderness.jpg"
+                            alt="Group of hikers standing on a Patagonian mountain ridge" loading="lazy" width="400"
+                            height="260" />
+                        <span class="tour-card__label">Next: Mar 15</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Patagonia Wilderness</h3>
+                        <p class="tour-card__text">
+                            Trek through pristine landscapes where glaciers meet granite peaks
+                            in Earth's most remote wilderness.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>14 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>Adventure Level</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.9</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 2,799 dollars per person">
+                                <strong class="tour-card__cost-value">$2,799</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Patagonia Wilderness -->
+
+
+                <!-- ── Card 4: Japanese Gardens & Temples ─────────────────── -->
+                <article class="tour-card" data-category="cultural" aria-label="Japanese Gardens and Temples tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/japanese-gardens.jpg"
+                            alt="Travellers walking through a lush Japanese garden during cherry blossom season"
+                            loading="lazy" width="400" height="260" />
+                        <span class="tour-card__label">Cherry blossom season</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Japanese Gardens &amp; Temples</h3>
+                        <p class="tour-card__text">
+                            Experience the harmony of ancient traditions and modern elegance
+                            in Japan's most sacred spaces.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>11 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>Cultural Focus</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.8</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 2,199 dollars per person">
+                                <strong class="tour-card__cost-value">$2,199</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Japanese Gardens & Temples -->
+
+
+                <!-- ── Card 5: Scottish Highlands & Castles ───────────────── -->
+                <article class="tour-card" data-category="cultural" aria-label="Scottish Highlands and Castles tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/scottish-highlands.jpg"
+                            alt="Hiker with arms spread wide overlooking the Scottish Highlands" loading="lazy"
+                            width="400" height="260" />
+                        <span class="tour-card__label">Year-round</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Scottish Highlands &amp; Castles</h3>
+                        <p class="tour-card__text">
+                            Discover mist-shrouded lochs, ancient castles, and Highland culture
+                            in Scotland's most dramatic region.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>7 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>History &amp; Nature</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.6</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 1,599 dollars per person">
+                                <strong class="tour-card__cost-value">$1,599</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Scottish Highlands & Castles -->
+
+
+                <!-- ── Card 6: Costa Rica Wildlife Immersion ──────────────── -->
+                <article class="tour-card" data-category="family" aria-label="Costa Rica Wildlife Immersion tour">
+                    <div class="tour-card__figure">
+                        <img class="tour-card__photo" src="images/tours/costa-rica-wildlife.jpg"
+                            alt="Group trekking through Costa Rica's lush rainforest" loading="lazy" width="400"
+                            height="260" />
+                        <span class="tour-card__label">Eco-certified</span>
+                    </div>
+
+                    <div class="tour-card__content">
+                        <h3 class="tour-card__heading">Costa Rica Wildlife Immersion</h3>
+                        <p class="tour-card__text">
+                            Encounter diverse ecosystems from cloud forests to tropical beaches
+                            in this biodiversity hotspot.
+                        </p>
+
+                        <ul class="tour-card__details" aria-label="Tour details">
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                <span>9 Days</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon" aria-hidden="true" focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                <span>Eco-Tourism</span>
+                            </li>
+                            <li class="tour-card__detail-item">
+                                <svg class="tour-card__detail-icon tour-card__detail-icon--star" aria-hidden="true"
+                                    focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg>
+                                <span>4.7</span>
+                            </li>
+                        </ul>
+
+                        <div class="tour-card__bottom">
+                            <p class="tour-card__cost" aria-label="Price: 1,499 dollars per person">
+                                <strong class="tour-card__cost-value">$1,499</strong>
+                                <span class="tour-card__cost-label">per person</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- /tour-card: Costa Rica Wildlife Immersion -->
+
+
+            </div>
+            <!-- /tours-section__list -->
+
+        </section>
+        <!-- /tours-section -->
         <!-- page-specific content ends here -->
         <footer id="footer">
             <div class="footer__container">

@@ -4,22 +4,17 @@
     --contrast: #fff;
     --text: #3a3a3a;
     --radius: 20px;
-
+    --radius-small: 10px;
+    --radius-large: 40px;
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
-
-    /* badge color tokens */
-    --badge-featured: orangered;
-    --badge-popular: rgb(1, 155, 1);
-    --badge-adventure: rgb(241, 114, 68);
-    --badge-culture: rgb(253, 93, 120);
-    --badge-luxury: rgb(84, 84, 248);
-    --badge-romantic: rgb(160, 55, 73);
-    --badge-vibrant: rgb(179, 78, 41);
-    --badge-scenic-grad: linear-gradient(135deg, #00b894, #00d2aa);
 }
 
-/* ======= DESTINATIONS HERO ======= */
-.destinations-hero {
+* {
+    font-family: var(--font) !important;
+}
+
+/* ======= tours HERO ======= */
+.tours-hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,18 +25,18 @@
     color: var(--contrast);
 }
 
-.destinations-hero__title {
+.tours-hero__title {
     font-size: 2.5rem;
     font-weight: bolder;
 }
 
-.destinations-hero__description {
+.tours-hero__description {
     text-align: center;
     margin: 15px 0.5rem;
 }
 
-/* ======= DESTINATIONS BREADCRUMB ======= */
-.destinations-hero__main-pages {
+/* ======= tours BREADCRUMB ======= */
+.tours-hero__main-pages {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,4 +54,278 @@
 
 .center-page {
     color: var(--contrast);
+}
+
+.tours-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 3rem 0.8rem;
+}
+
+.tours-text__heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.tours-text__description {
+    text-align: center;
+    line-height: 1.5rem;
+    width: 85%;
+}
+
+.filter-section {
+    display: flex;
+    padding: 1rem 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0.9rem 2rem 0.9rem;
+    border-radius: 30px;
+    font-family: var(--font);
+    gap: 1rem;
+    box-shadow: var(--shadow-soft);
+    flex-direction: column;
+}
+
+.filter-section__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.filter-section__search-input {
+    border: none;
+    outline: none;
+    width: 82%;
+    padding: 1rem 1.5rem;
+}
+
+.filter-section__search-input::placeholder {
+    overflow: visible;
+    font-size: 1.2rem;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: max-content;
+}
+
+.filter-section__search-button {
+    border: none;
+    outline: none;
+    border-radius: var(--radius-large);
+    padding: 0.8rem 0.9rem;
+    background-color: var(--accent);
+    color: var(--contrast);
+    cursor: pointer;
+}
+
+.search-svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: var(--contrast);
+    font-weight: bolder;
+}
+
+.filter-section__list {
+    display: flex;
+    margin: 0 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-section__list li {
+    list-style: none;
+}
+
+.filter-section__item:first-child .filter-section__button {
+    background-color: var(--accent);
+    color: var(--contrast);
+}
+
+.filter-section__button {
+    color: #3c3c3c;
+    font-weight: bolder;
+    font-size: 1rem;
+    border: 1px solid #3a3a3a47;
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 0.9rem 1.2rem;
+}
+
+.journey-card {
+    display: flex;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    flex-direction: column;
+    margin: 3rem 0 4rem 3rem;;
+    gap: 2rem;
+}
+
+.card-image {
+    display: flex;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.journey-image {
+    object-fit: cover;
+    height: 45vh;
+    border-radius: 20px;
+    object-position: center;
+    width: 90%;
+}
+
+.journey-card__badge {
+    background: linear-gradient(135deg, #000000d1, var(--accent));
+    color: var(--contrast);
+    font-weight: bolder;
+    padding: 0.7rem 1rem;
+    width: max-content;
+    border-radius: 30px;
+}
+
+.journey-card__title {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.journey-card__description {
+    width: 75%;
+    line-height: 1.5rem;
+}
+
+.journey-card__details {
+    display: flex;
+    padding-right: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.journey-card__details li {
+    list-style: none;
+}
+
+.journey-card__detail-item,
+.journey-card__price-label {
+    font-size: 1rem;
+    color: #3a3a3a;
+}
+
+.rating {
+    color: var(--accent);
+    font-weight: bolder;
+}
+
+.main-stars {
+    font-size: 1.2rem;
+}
+
+.journey-card__price-value {
+    font-size: 3rem;
+    margin-left: 10px;
+    color: var(--accent);
+}
+
+.journey-card__actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.card__link--primary {
+    text-decoration: none;
+    color: var(--contrast);
+    font-weight: bolder;
+    background-color: var(--accent);
+    border-radius: 10px;
+    padding: 1rem 2.5rem;
+}
+
+.card__link--secondary {
+    text-decoration: none; 
+    margin-left: 4rem; 
+    color: var(--accent);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.explore-interests {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.explore-interests__heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.explore-interests__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.explore-interests__list li {
+    list-style: none;
+}
+
+.explore-interests__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.explore-interests__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.explore-interests__image {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    width: 90%;
+    height: 50vh;
+}
+
+.explore-interests__name {
+    font-size: 1.5rem;
+}
+
+.explore-interests__count {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.tours-section__top {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+.tours-section__title {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.tours-section__layout-btns {
+    display: flex;
+    gap: 0.5rem;
+    
 }
