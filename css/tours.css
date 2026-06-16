@@ -2,11 +2,14 @@
     --font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
     --accent: #f95e4d;
     --contrast: #fff;
-    --text: #3a3a3a;
+    --text: #3a3a3abf;
     --radius: 20px;
     --radius-small: 10px;
     --radius-large: 40px;
+    --pill-radius: 30px;
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition-smooth: 0.3s ease-out;
+    --icon-size: 16px;
 }
 
 * {
@@ -74,6 +77,7 @@
 .tours-text__description {
     text-align: center;
     line-height: 1.5rem;
+    color: var(--text);
     width: 85%;
 }
 
@@ -83,7 +87,7 @@
     justify-content: center;
     align-items: center;
     margin: 2rem 0.9rem 2rem 0.9rem;
-    border-radius: 30px;
+    border-radius: var(--pill-radius);
     font-family: var(--font);
     gap: 1rem;
     box-shadow: var(--shadow-soft);
@@ -148,11 +152,13 @@
 }
 
 .filter-section__button {
+    /* ======= FILTER BUTTONS ======= */
     color: #3c3c3c;
     font-weight: bolder;
+    cursor: pointer;
     font-size: 1rem;
     border: 1px solid #3a3a3a47;
-    border-radius: 30px;
+    border-radius: var(--pill-radius);
     background-color: transparent;
     padding: 0.9rem 1.2rem;
 }
@@ -161,7 +167,8 @@
     display: flex;
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
     flex-direction: column;
-    margin: 3rem 0 4rem 3rem;;
+    margin: 3rem 0 4rem 3rem;
+    ;
     gap: 2rem;
 }
 
@@ -179,22 +186,32 @@
     width: 90%;
 }
 
+.journey-card__body {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
 .journey-card__badge {
+    /* ======= JOURNEY BADGE ======= */
     background: linear-gradient(135deg, #000000d1, var(--accent));
     color: var(--contrast);
     font-weight: bolder;
     padding: 0.7rem 1rem;
     width: max-content;
-    border-radius: 30px;
+    border-radius: var(--pill-radius);
 }
 
 .journey-card__title {
     font-size: 2.3rem;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .journey-card__description {
     width: 75%;
+    color: var(--text);
     line-height: 1.5rem;
 }
 
@@ -239,17 +256,18 @@
 }
 
 .card__link--primary {
+    /* ======= PRIMARY CARD LINK/BUTTON ======= */
     text-decoration: none;
     color: var(--contrast);
     font-weight: bolder;
     background-color: var(--accent);
-    border-radius: 10px;
+    border-radius: var(--radius-small);
     padding: 1rem 2.5rem;
 }
 
 .card__link--secondary {
-    text-decoration: none; 
-    margin-left: 4rem; 
+    text-decoration: none;
+    margin-left: 4rem;
     color: var(--accent);
     font-weight: bolder;
     font-size: 1rem;
@@ -265,7 +283,7 @@
 
 .explore-interests__heading {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .explore-interests__list {
@@ -324,8 +342,438 @@
     font-weight: normal;
 }
 
+/* AFTER — correct */
 .tours-section__layout-btns {
     display: flex;
+    align-items: center;
     gap: 0.5rem;
-    
+    margin-top: 3rem;
+}
+
+.tours-section__layout-icon,
+.tours-section__layout-icon * {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.tours-section__layout-btn {
+    /* ======= LAYOUT VIEW TOGGLE BUTTON ======= */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #bbb;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+.tours-section__layout-btn--active {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+.tours-section__layout-icon {
+    /* ======= LAYOUT ICON ======= */
+    width: var(--icon-size);
+    height: var(--icon-size);
+    display: block;
+}
+
+.tours-section__list {
+    display: grid;
+    margin: 3rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.tour-card {
+    /* ======= TOUR CARD CONTAINER ======= */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+    gap: 1rem;
+    transition: all var(--transition-smooth);
+    transform: scale(1);
+    position: relative;
+}
+
+.tour-card:hover,
+.tour-card:focus,
+.tour-card:active {
+    box-shadow: var(--shadow-soft);
+    transform: scale(1.02);
+}
+
+.tour-card__label {
+    /* ======= TOUR CARD LABEL/BADGE ======= */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--contrast);
+    border-radius: var(--pill-radius);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.tour-card__photo {
+    /* ======= TOUR CARD IMAGE ======= */
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.tour-card:hover .tour-card__photo,
+.tour-card:focus .tour-card__photo,
+.tour-card:active .tour-card__photo {
+    transform: scale(1.02);
+}
+
+.tour-card__content {
+    /* ======= TOUR CARD CONTENT SECTION ======= */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.3rem 1.3rem 3rem 1.3rem;
+}
+
+.tour-card__heading {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.tour-card__text {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.tour-card__details {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.tour-card__details li {
+    list-style: none;
+}
+
+.tour-card__detail-item,
+.tour-card__cost-label {
+    font-size: 0.9rem;
+    align-self: center;
+    color: var(--text);
+}
+
+.tour-card__detail-icon {
+    color: var(--accent);
+    font-size: 1rem;
+    fill: currentColor
+}
+
+.tour-card__cost {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tour-card__cost-value {
+    font-size: 1.8rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.offers__title {
+    font-size: 2.2rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.offers__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.offer-card {
+    /* ======= OFFER CARD CONTAINER ======= */
+    margin: 0 1rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: var(--radius);
+    transition: all var(--transition-smooth);
+    transform: scale(1);
+    flex-direction: column;
+}
+
+.offer-card:hover,
+.offer-card:focus,
+.offer-card:active {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-soft);
+}
+
+.offer-card__img {
+    /* ======= OFFER CARD IMAGE ======= */
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.offer-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+}
+
+.offer-card__tag {
+    /* ======= OFFER CARD TAG/BADGE ======= */
+    background-color: var(--accent);
+    color: var(--contrast);
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    width: max-content;
+    border-radius: var(--pill-radius);
+}
+
+.offer-card__heading {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.offer-card__text {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.offer-card__date {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.offer-card__btn {
+    background-image: linear-gradient(45deg, #000000ad, #f35240);
+    padding: 1.2rem 1.6rem;
+    color: var(--contrast);
+    width: max-content;
+    font-weight: bolder;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.custom-cta {
+    /* ======= CUSTOM CTA SECTION ======= */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 3rem;
+    gap: 1.5rem;
+    height: 90vh;
+}
+
+.custom-cta__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.custom-cta__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.custom-cta__btn {
+    /* ======= CTA BUTTON ======= */
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--contrast);
+    background-color: var(--accent);
+    padding: 1.2rem 2rem;
+    border-radius: var(--radius-small);
+}
+
+.custom-cta__link {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.custom-cta__text {
+    color: var(--text);
+    font-size: 1rem;
+    margin: 0 2rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    /* ======= RESPONSIVE ADJUSTMENTS: TABLET & UP ======= */
+    .filter-section {
+        margin: 2rem 1.3rem 2rem 1.3rem;
+    }
+
+    .journey-card__actions {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        gap: 0;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+
+    .explore-interests__image {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        width: 98%;
+        height: 20vh;
+    }
+
+    .explore-interests__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1.5rem;
+    }
+
+    .tour-card__figure {
+        width: 100%;
+    }
+
+    .tour-card {
+        margin: 0 1.5rem;
+    }
+
+    .offer-card__img {
+        height: 30vh;
+    }
+
+    .custom-cta__actions {
+        flex-direction: row;
+    }
+
+    .custom-cta {
+        height: 40vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* ======= RESPONSIVE ADJUSTMENTS: DESKTOP & UP ======= */
+    .tours-text__heading {
+        font-size: 3.5rem;
+        width: 50%;
+        font-weight: normal;
+    }
+
+    .tours-text__description {
+        font-size: 1.2rem;
+        color: var(--text);
+        width: 55%;
+    }
+
+    .journey-card__description {
+        font-size: 1.2rem;
+        color: var(--text);
+        width: 80%;
+    }
+
+    .filter-section {
+        width: 65%;
+        margin-inline: auto;
+    }
+
+    .filter-section__button:hover {
+        background-color: var(--accent);
+        color: var(--contrast);
+    }
+
+    .journey-card {
+        margin-inline: auto;
+        flex-direction: row;
+        width: 85%;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .journey-image { 
+        height: 60vh;
+        margin-left: 2rem; 
+        width: 90%;
+    }
+
+    .journey-card__body {
+        width: 100%;
+    }
+
+    .journey-card__actions {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .card__link--secondary {
+        margin-left: 0;
+    }
+
+    .explore-interests__name {
+        font-size: 1.2rem;
+    }
+
+    .explore-interests__list {
+        width: 80%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .explore-interests__image {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .tours-section__list {
+        display: grid;
+        width: 80%;
+        margin-inline: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .tour-card {
+        margin: 0;
+    }
+
+    .tours-section__title {
+        margin-left: 4.5rem;
+    }
+
+    .tours-section__layout-btns {
+        margin: 3rem 5rem 0 0;
+    }
+
+    .offers__grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 75%;
+        margin-inline: auto;
+    }
+
+    .offer-card {
+        margin: 0;
+    }
+
+    .custom-cta__text {
+        width: 40%;
+        font-size: 1.1rem;
+        margin: 0;
+    }
 }

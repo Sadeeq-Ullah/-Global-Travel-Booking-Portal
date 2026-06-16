@@ -67,7 +67,63 @@
             </div>
         </header>
         <!-- page-specific content starts here -->
-        <section class="page-content"></section>
+        <section class="carousel-section" aria-label="Image Gallery Carousel" role="region">
+
+            <div class="carousel">
+                <!-- Previous Button -->
+                <button class="carousel__btn carousel__btn--prev" aria-label="Previous slide">
+                    <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+                </button>
+
+                <!-- Slides Track -->
+                <ul class="carousel__track">
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-8.webp" alt="Mountain landscape gallery image 8" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-6.webp" alt="Ocean view gallery image 6" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-4.webp" alt="Cityscape gallery image 4" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-2.webp" alt="Forest trail gallery image 2" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-7.webp" alt="Sunset horizon gallery image 7" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-5.webp" alt="Night sky gallery image 5" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-1.webp" alt="Waterfall gallery image 1" loading="lazy">
+                    </li>
+                    <li class="carousel__slide">
+                        <img src="./img/gallery/gallery-3.webp" alt="Desert dunes gallery image 3" loading="lazy">
+                    </li>
+                </ul>
+
+                <!-- Next Button -->
+                <button class="carousel__btn carousel__btn--next" aria-label="Next slide">
+                    <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <!-- Indicators (Dots) -->
+            <div class="carousel__indicators" role="tablist" aria-label="Slide navigation">
+                <button class="carousel__indicator carousel__indicator--active" aria-label="Go to slide 1"
+                    data-slide-index="0" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 2" data-slide-index="1" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 3" data-slide-index="2" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 4" data-slide-index="3" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 5" data-slide-index="4" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 6" data-slide-index="5" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 7" data-slide-index="6" role="tab"></button>
+                <button class="carousel__indicator" aria-label="Go to slide 8" data-slide-index="7" role="tab"></button>
+            </div>
+
+        </section>
         <!-- page-specific content ends here -->
         <footer id="footer">
             <div class="footer__container">
