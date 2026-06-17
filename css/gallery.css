@@ -1,0 +1,40 @@
+:root {
+    --font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --accent: #f95e4d;
+    --contrast: #fff;
+    --text: #3a3a3abf;
+    --radius: 20px;
+    --radius-small: 10px;
+    --radius-large: 40px;
+    --pill-radius: 30px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition-smooth: 0.3s ease-out;
+    --icon-size: 16px;
+}
+
+.carousel__btn {
+    display: none;
+}
+
+.carousel-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.carousel__track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.carousel__track li {
+    list-style: none;
+}
+
+.carousel__slide img {
+    width
+}
