@@ -67,6 +67,18 @@
                 </svg>
             </div>
         </header>
+        <section class="gallery-hero">
+            <h1 class="gallery-hero__title">Gallery</h1>
+            <p class="gallery-hero__description">
+                Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
+                molestias.
+            </p>
+            <div class="gallery-hero__main-pages">
+                <a class="coloured-page" href="index.html">Home</a>
+                <div class="slash-sign">/</div>
+                <a class="center-page" href="gallery.html">Gallery</a>
+            </div>
+        </section>
         <!-- page-specific content starts here -->
         <section class="carousel-section" aria-label="Image Gallery Carousel" role="region">
 
@@ -79,28 +91,36 @@
                 <!-- Slides Track -->
                 <ul class="carousel__track">
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-8.webp" alt="Mountain landscape gallery image 8" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-8.webp"
+                            alt="Mountain landscape gallery image 8" loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-6.webp" alt="Ocean view gallery image 6" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-6.webp" alt="Ocean view gallery image 6"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-4.webp" alt="Cityscape gallery image 4" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-4.webp" alt="Cityscape gallery image 4"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-2.webp" alt="Forest trail gallery image 2" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-2.webp" alt="Forest trail gallery image 2"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-7.webp" alt="Sunset horizon gallery image 7" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-7.webp" alt="Sunset horizon gallery image 7"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-5.webp" alt="Night sky gallery image 5" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-5.webp" alt="Night sky gallery image 5"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-1.webp" alt="Waterfall gallery image 1" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-1.webp" alt="Waterfall gallery image 1"
+                            loading="lazy">
                     </li>
                     <li class="carousel__slide">
-                        <img src="./img/gallery/gallery-3.webp" alt="Desert dunes gallery image 3" loading="lazy">
+                        <img class="track-image" src="./img/gallery/gallery-3.webp" alt="Desert dunes gallery image 3"
+                            loading="lazy">
                     </li>
                 </ul>
 
@@ -111,17 +131,16 @@
 
             </div>
 
-            <!-- Indicators (Dots) -->
+            <!-- Radio Buttons (Dots) -->
             <div class="carousel__indicators" role="tablist" aria-label="Slide navigation">
-                <button class="carousel__indicator carousel__indicator--active" aria-label="Go to slide 1"
-                    data-slide-index="0" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 2" data-slide-index="1" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 3" data-slide-index="2" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 4" data-slide-index="3" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 5" data-slide-index="4" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 6" data-slide-index="5" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 7" data-slide-index="6" role="tab"></button>
-                <button class="carousel__indicator" aria-label="Go to slide 8" data-slide-index="7" role="tab"></button>
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="0" checked>
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="1">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="2">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="3">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="4">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="5">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="6">
+                <input type="radio" name="slide" class="carousel__indicator" data-slide-index="7">
             </div>
 
         </section>
@@ -282,6 +301,7 @@
         </footer>
     </main>
     <script type="module" src="js/scripts.js" defer></script>
+    <script type="module" src="js/slider.js" defer></script>
     <a class="page-scrolled" href="#"><svg class="upper-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             fill="currentColor">
             <path

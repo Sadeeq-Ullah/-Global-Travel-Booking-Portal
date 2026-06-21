@@ -254,17 +254,17 @@ body.top-jump {
     cursor: pointer;
     color: var(--primary-color);
 }
- 
+
 .header__nav-item a.active {
-    color: #ff5a43 !important; 
+    color: #ff5a43 !important;
     font-weight: 600;
 }
- 
+
 .header__dropdown-menu.active {
     color: #ff5a43 !important;
     font-weight: 600;
 }
- 
+
 .header__dropdown-menu.active .dropdown-icon {
     fill: #ff5a43;
 }
@@ -1015,6 +1015,15 @@ body.top-jump {
 
 .testimonials__track {
     display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: grab;
+}
+
+.testimonials__track.dragging {
+    cursor: grabbing;
 }
 
 .testimonial-card {
