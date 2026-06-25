@@ -83,7 +83,8 @@
 .article-card--featured {
     display: flex;
     color: white;
-    width: 100%;
+    box-shadow: var(--shadow-soft);
+    width: 93%;
     position: relative;
     margin: 1rem;
     flex-direction: column;
@@ -93,8 +94,6 @@
 .article-card__image-wrapper {
     position: relative;
     display: inline-block;
-    width: 93%;
-    margin: 0.8rem;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -271,17 +270,211 @@
 .blog-grid {
     display: grid;
     place-items: center;
-    gap: 1rem;
+    gap: 2rem;
+    margin: 1rem;
     min-height: 100dvh;
 }
 
 .blog-grid__card {
     display: flex;
+    overflow: hidden;
     width: 100%;
-    flex-direction: column; 
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    border-radius: 15px;
+    flex-direction: column;
 }
 
 .blog-card__image {
     width: 100%;
-    
+    transition: all 0.3s ease-out;
+    transform: scale(1);
+    margin-bottom: 1rem;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-card__body {
+    display: flex;
+    gap: 1rem;
+    padding: 1.7rem;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.blog-card__meta {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.blog-card__image-wrapper {
+    position: relative;
+}
+
+.blog-card__date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--contrast);
+    background-color: var(--accent);
+    border-radius: 5px;
+    padding: 0.8rem 0.5rem;
+}
+
+.merged-meta {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: -32px;
+    align-items: center;
+    left: 25px;
+    gap: 1rem;
+}
+
+.blog-card__date-number {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+.blog-card__date-month {
+    font-size: 0.8rem;
+    letter-spacing: 1.3px;
+    font-weight: bolder;
+}
+
+.blog-card__author i,
+.blog-card__category i {
+    color: var(--accent);
+}
+
+.blog-card__heading {
+    width: 90%;
+    letter-spacing: 1px;
+}
+
+.blog-grid__card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.blog-grid__card:hover .blog-card__heading,
+.blog-grid__card:hover .blog-card__readmore {
+    color: var(--accent);
+}
+
+.blog-grid__card:hover .blog-card__image {
+    transform: scale(1.05);
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.page-numbers__list {
+    color: var(--accent);
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.list__item {
+    list-style: none;
+    font-size: 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__item:focus,
+.list__item:hover {
+    color: var(--contrast);
+    background-color: var(--accent);
+}
+
+.list__item i {
+    font-size: 1.3rem;
+}
+
+
+.list__item-anchor {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list__item--active {
+    color: var(--contrast);
+    background-color: var(--accent);
+}
+
+@media screen and (min-width: 768px) {
+    .article-card--featured .article-card__image {
+        height: 45vh;
+    }
+
+    .article-card__image-wrapper::after {
+        background: linear-gradient(to top, rgb(0 0 0 / 84%) 0%, #00000000 45%);
+    }
+
+    .article-card--featured .article-card__heading {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        letter-spacing: 1.5px;
+    }
+
+    .article-card__date,
+    .sibling-card__date {
+        color: #000000;
+    }
+
+    .sibling-card {
+        margin: 0;
+    }
+
+    .news-layout__grid {
+        width: 93%;
+        flex-direction: row;
+    }
+
+    .trending-card__image {
+        width: 32%;
+        height: 11vh;
+    }
+
+    .trending-card__heading {
+        width: 100%;
+    }
+
+    .news-layout__sidebar-list {
+        min-height: 0;
+        gap: 0;
+    }
+
+    .news-tabs {
+        gap: 0;
+        margin: 0 0 0 40px;
+        place-items: flex-end;
+        grid-template-columns: repeat(3, 120px);
+    }
+
+    .news-layout__sidebar {
+        min-height: 87dvh;
+        gap: 0;
+    }
+
 }
