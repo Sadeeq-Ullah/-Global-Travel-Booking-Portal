@@ -1516,17 +1516,17 @@ body.top-jump {
 }
 
 .footer__social-link svg {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     position: relative;
     z-index: 1000;
 }
 
 .footer__social-link::after {
     content: "";
-    width: 1.9em;
+    width: 1.5em;
     border-radius: var(--radius-full);
-    height: 1.9em;
+    height: 1.5em;
     background-color: rgb(229 226 224 / 13%);
     position: absolute;
     top: -0.8rem;
@@ -2504,6 +2504,7 @@ body.top-jump {
         gap: 6rem;
         justify-content: center;
         display: grid;
+        margin-top: 3rem;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
     }
@@ -2515,7 +2516,7 @@ body.top-jump {
     }
 
     .touch-column {
-        margin-top: 2rem;
+        margin-top: 0.5rem;
     }
 
     .footer__bottom-content {
@@ -2551,8 +2552,8 @@ body.top-jump {
 
     .footer__social-link::after {
         content: '';
-        top: -0.6rem;
-        left: -11px;
+        top: -0.5rem;
+        left: -8px;
         transition: background-color 0.4s ease-out;
     }
 

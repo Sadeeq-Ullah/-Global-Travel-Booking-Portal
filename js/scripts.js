@@ -132,3 +132,32 @@ if (filter && filter[0] && cardsgrid) {
     });
     filter[0].click();
 }
+
+const blogFilterBtns = document.querySelectorAll(".news-tabs button")
+const blogArticles = document.querySelectorAll(".news-layout__sidebar-list article")
+
+if (blogArticles && blogFilterBtns) {
+    blogFilterBtns.forEach(filterButton => {
+        filterButton.addEventListener("click", (event) => {
+
+            blogFilterBtns.forEach(removeBtn => {
+                removeBtn.classList.remove("news-tabs__item--active")
+
+                filterButton.classList.add("news-tabs__item--active");
+                let buttonName = filterButton.getAttribute("data-filter")
+
+                blogArticles.forEach(Article => {
+                    let articleName = Article.getAttribute("data-category")
+
+                    if (buttonName === articleName) {
+                        Article.style.display = "flex";
+                        Article.style.animation = "fadeIn 0.8s ease";
+                    } else {
+                        Article.style.display = "none" 
+                    }
+                })
+            })
+        });
+        blogFilterBtns[0].click();
+    });
+}

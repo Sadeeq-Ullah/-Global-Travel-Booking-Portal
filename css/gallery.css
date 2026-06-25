@@ -83,21 +83,20 @@
     height: 100%;
     overflow: visible;
     gap: 1rem;
-    perspective: 800px;
     transition: transform 0.5s ease;
 }
 
-.carousel__track > :first-child {
+.carousel__track> :first-child {
     margin-left: 7px;
 }
 
 .carousel__slide {
     list-style: none;
+    perspective-origin: left; 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 96%;
-    transition: all 0.;
+    flex: 0 0 96%; 
     overflow: hidden;
     border-radius: 20px;
     height: 100%;

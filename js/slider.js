@@ -197,7 +197,6 @@ if (gallerySlider && galleryCards.length > 0) {
 
     const cardsLength = document.querySelectorAll(".carousel__slide").length;
     let currentIdx = 1;
-    gallerySlider.style.transform = `translateX(-100%)`;
 
     function updateSlider() {
         gallerySlider.style.transition = 'transform 500ms ease';
@@ -261,10 +260,6 @@ if (gallerySlider && galleryCards.length > 0) {
         gallerySlider.style.transform = `translateX(-${newPosition}%)`;
     }
 
-    for (let index = 0; index < cardsLength; index++) {
-        const card = galleryCards[index];   
-        console.log(index)
-    }
 
     function dragEnd(e) {
         if (!isDragging) return;
@@ -284,7 +279,23 @@ if (gallerySlider && galleryCards.length > 0) {
         } else if (totalDistance < -threshold) {
             currentIdx = currentIdx + 1;
         }
-        gallerySlider.style.transition = 'transform 500ms ease';
+
+        function updateCards() {
+            cards.forEach((card, index) => {
+                let offset = index - currentIdx;
+                let rotation = offset * 30;  // 30deg per step
+                let scale = 1 - Math.abs(offset) * 0.1;  // Shrink as it moves away
+                let translateZ = -Math.abs(offset) * 100;  // Push back
+
+                card.style.transform = `
+            perspective(1200px) 
+            rotateY(${rotation}deg) 
+            scale(${scale}) 
+            translateZ(${translateZ}px)`;
+                card.style.opacity = 1 - Math.abs(offset) * 0.2;  // Fade edges
+                card.style.zIndex = 10 - Math.abs(offset);  // Stack order
+            });
+        }
 
         if (currentIdx === 0) {
             gallerySlider.style.transition = 'none';

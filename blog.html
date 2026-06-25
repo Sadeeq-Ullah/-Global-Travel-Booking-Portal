@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -66,8 +67,418 @@
                 </svg>
             </div>
         </header>
-        <!-- page-specific content starts here -->
-        <section class="page-content"></section>
+        <section class="blog-hero">
+            <h1 class="blog-hero__title">Blog</h1>
+            <p class="blog-hero__description">
+                Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
+                molestias.
+            </p>
+            <div class="blog-hero__main-pages">
+                <a class="coloured-page" href="index.html">Home</a>
+                <div class="slash-sign">/</div>
+                <a class="center-page" href="blog.html">Blog</a>
+            </div>
+        </section>
+
+        <section class="news-layout">
+            <div class="news-layout__main">
+
+                <article class="article-card article-card--featured">
+                    <div class="article-card__image-wrapper">
+                        <img src="./img/blog/blog-hero-9.webp" alt="Optimizing Strategic Initiatives"
+                            class="article-card__image">
+                    </div>
+                    <div class="article-card__body">
+                        <div class="article-card__meta">
+                            <span class="article-card__badge article-card__badge--politics">Politics</span>
+                            <span class="article-card__date">02/15/2024</span>
+                        </div>
+                        <h3 class="article-card__heading">Optimizing Strategic Initiatives Through Cross-Functional
+                            Collaboration</h3>
+                        <p class="article-card__description">
+                            Leveraging core competencies to drive sustainable growth and maximize stakeholder value
+                            through innovative solutions and market-driven approaches.
+                        </p>
+                        <div class="article-card__author">
+                            by <span class="article-card__author-name">Jennifer Mitchell</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="news-layout__grid">
+                    <article class="sibling-card">
+                        <img src="./img/blog/blog-post-1.webp" alt="Implementing Agile Methodologies"
+                            class="sibling-card__image">
+                        <div class="sibling-card__body">
+                            <div class="sibling-card__meta">
+                                <span class="sibling-card__badge">Politics</span>
+                                <span class="sibling-card__date">03/21/2024</span>
+                            </div>
+                            <h3 class="sibling-card__heading">Implementing Agile Methodologies for Enhanced Business
+                                Performance</h3>
+                            <div class="sibling-card__author">
+                                by <span class="sibling-card__author-name">Robert Anderson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="sibling-card">
+                        <img src="./img/blog/blog-post-2.webp" alt="Streamlining Operations"
+                            class="sibling-card__image">
+                        <div class="sibling-card__body">
+                            <div class="sibling-card__meta">
+                                <span class="sibling-card__badge">Business</span>
+                                <span class="sibling-card__date">01/30/2024</span>
+                            </div>
+                            <h3 class="sibling-card__heading">Streamlining Operations Through Digital Transformation
+                                Solutions</h3>
+                            <div class="sibling-card__author">
+                                by <span class="sibling-card__author-name">Sarah Thompson</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="news-layout__sidebar">
+                <nav class="news-tabs">
+                    <button class="news-tabs__item" data-filter="top-stories">Top stories</button>
+                    <button class="news-tabs__item" data-filter="trending-news">Trending News</button>
+                    <button class="news-tabs__item" data-filter="latest-news">Latest News</button>
+                </nav>
+
+                <div class="news-layout__sidebar-list">
+
+                    <article class="trending-card" data-category="top-stories">
+                        <img src="./img/blog/blog-post-square-1.webp" alt="Maximizing ROI" class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Science</span>
+                            <h4 class="trending-card__heading">Maximizing ROI Through Strategic Resource Allocation</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Michael Davidson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="top-stories">
+                        <img src="./img/blog/blog-post-square-2.webp" alt="Leveraging Big Data Analytics"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Travel</span>
+                            <h4 class="trending-card__heading">Leveraging Big Data Analytics for Market Intelligence
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Emily Richardson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="top-stories">
+                        <img src="./img/blog/blog-post-square-3.webp" alt="Enhancing Customer Experience"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Politics</span>
+                            <h4 class="trending-card__heading">Enhancing Customer Experience Through Digital Innovation
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Daniel Cooper</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="top-stories">
+                        <img src="./img/blog/blog-post-square-4.webp" alt="Transforming Business Models"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Technology</span>
+                            <h4 class="trending-card__heading">Transforming Business Models Through Digital Innovation
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Rachel Stevens</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="top-stories">
+                        <img src="./img/blog/blog-post-square-5.webp" alt="Strategic Investment Planning"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Finance</span>
+                            <h4 class="trending-card__heading">Strategic Investment Planning for Sustainable Growth</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Andrew Phillips</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="trending-news">
+                        <img src="./img/blog/blog-post-square-4.webp" alt="Implementing Sustainable Business Practices"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Science</span>
+                            <h4 class="trending-card__heading">Implementing Sustainable Business Practices for Long-term
+                                Growth</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Alexandra Foster</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="trending-news">
+                        <img src="./img/blog/blog-post-square-5.webp" alt="Optimizing Supply Chain Management"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Style</span>
+                            <h4 class="trending-card__heading">Optimizing Supply Chain Management Through Technology
+                                Integration</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Christopher Wells</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="trending-news">
+                        <img src="./img/blog/blog-post-square-6.webp" alt="Developing Strategic Partnerships"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Politics</span>
+                            <h4 class="trending-card__heading">Developing Strategic Partnerships for Market Expansion
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Victoria Palmer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="trending-news">
+                        <img src="./img/blog/blog-post-square-7.webp" alt="Enhancing Brand Value"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Marketing</span>
+                            <h4 class="trending-card__heading">Enhancing Brand Value Through Customer-Centric Strategies
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Sophia Rodriguez</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="trending-news">
+                        <img src="./img/blog/blog-post-square-8.webp" alt="Building High-Performance Teams"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Leadership</span>
+                            <h4 class="trending-card__heading">Building High-Performance Teams in Dynamic Environments
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Nathan Brooks</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="latest-news">
+                        <img src="./img/blog/blog-post-square-7.webp" alt="Accelerating Innovation"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Health</span>
+                            <h4 class="trending-card__heading">Accelerating Innovation Through Cross-functional
+                                Collaboration</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Benjamin Carter</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="latest-news">
+                        <img src="./img/blog/blog-post-square-8.webp" alt="Driving Business Growth"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Business</span>
+                            <h4 class="trending-card__heading">Driving Business Growth Through Strategic Digital
+                                Initiatives</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Olivia Martinez</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="latest-news">
+                        <img src="./img/blog/blog-post-square-9.webp" alt="Maximizing Operational Efficiency"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Sports</span>
+                            <h4 class="trending-card__heading">Maximizing Operational Efficiency Through Process
+                                Optimization</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">William Turner</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="latest-news">
+                        <img src="./img/blog/blog-post-square-10.webp" alt="Leveraging AI Solutions"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Innovation</span>
+                            <h4 class="trending-card__heading">Leveraging AI Solutions for Business Process Automation
+                            </h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Isabella Clark</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="trending-card" data-category="latest-news">
+                        <img src="./img/blog/blog-post-square-6.webp" alt="Implementing Agile Framework"
+                            class="trending-card__image">
+                        <div class="trending-card__body">
+                            <span class="trending-card__badge">Strategy</span>
+                            <h4 class="trending-card__heading">Implementing Agile Framework for Project Management
+                                Excellence</h4>
+                            <div class="trending-card__author">
+                                by <span class="trending-card__author-name">Marcus Henderson</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </aside>
+        </section>
+
+        <section class="blog-grid">
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-1.webp" alt="People working together in a modern office"
+                    class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">12</span>
+                            <span class="blog-card__date-month">December</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> John Doe</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Politics</span>
+                    </div>
+                    <h3 class="blog-card__heading">Dolorum optio tempore voluptas dignissimos</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-2.webp" alt="Modern colorful office interior" class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">19</span>
+                            <span class="blog-card__date-month">March</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> Julia Parker</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Economics</span>
+                    </div>
+                    <h3 class="blog-card__heading">Nisi magni odit consequatur autem nulla dolorem</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-3.webp" alt="Woman reading in a white chair" class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">24</span>
+                            <span class="blog-card__date-month">June</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> Maria Doe</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Sports</span>
+                    </div>
+                    <h3 class="blog-card__heading">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero
+                        sit sint.</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-4.webp" alt="Woman arranging items on a cork board"
+                    class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">05</span>
+                            <span class="blog-card__date-month">August</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> Maria Doe</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Sports</span>
+                    </div>
+                    <h3 class="blog-card__heading">Non rem rerum nam cum quo minus explicabo eius exercitationem.</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-5.webp" alt="Coffee brewing with artisan equipment"
+                    class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">17</span>
+                            <span class="blog-card__date-month">September</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> John Parker</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Politics</span>
+                    </div>
+                    <h3 class="blog-card__heading">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-grid__card">
+                <a href="blog-details.html" class="blog-grid__card-link"></a>
+                <img src="./img/blog/blog-post-6.webp" alt="Wooden shelves with plants and light bulbs"
+                    class="blog-card__image">
+                <div class="blog-card__body">
+                    <div class="blog-card__meta">
+                        <div class="blog-card__date">
+                            <span class="blog-card__date-number">07</span>
+                            <span class="blog-card__date-month">December</span>
+                        </div>
+                        <span class="blog-card__author"><i class="ri-user-line"></i> Julia White</span>
+                        <span class="blog-card__meta-slash">/</span>
+                        <span class="blog-card__category"><i class="ri-folder-2-line"></i> Economics</span>
+                    </div>
+                    <h3 class="blog-card__heading">Distinctio provident quibusdam numquam aperiam aut</h3>
+                    <div class="blog-card__readmore">
+                        <span>Read More</span>
+                        <i class="ri-arrow-right-long-line"></i>
+                    </div>
+                </div>
+            </article>
+
+        </section>
         <!-- page-specific content ends here -->
         <footer id="footer">
             <div class="footer__container">
@@ -224,7 +635,7 @@
             </div>
         </footer>
     </main>
-    <script type="module" src="js/scripts.js" defer></script>
+    <script type="module" src="./js/scripts.js" defer></script>
     <a class="page-scrolled" href="#"><svg class="upper-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             fill="currentColor">
             <path
