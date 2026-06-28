@@ -139,10 +139,18 @@
             </div>
 
             <aside class="news-layout__sidebar">
-                <nav class="news-tabs">
-                    <button class="news-tabs__item" data-filter="top-stories">Top stories</button>
-                    <button class="news-tabs__item" data-filter="trending-news">Trending News</button>
-                    <button class="news-tabs__item" data-filter="latest-news">Latest News</button>
+                <nav class="news-tabs" aria-label="Blog categories">
+                    <ul class="news-tabs__list">
+                        <li class="news-tabs__item">
+                            <button class="news-tabs__button news-tabs__button--active" type="button" data-filter="top-stories">Top stories</button>
+                        </li>
+                        <li class="news-tabs__item">
+                            <button class="news-tabs__button" type="button" data-filter="trending-news">Trending News</button>
+                        </li>
+                        <li class="news-tabs__item">
+                            <button class="news-tabs__button" type="button" data-filter="latest-news">Latest News</button>
+                        </li>
+                    </ul>
                 </nav>
 
                 <div class="news-layout__sidebar-list">
@@ -343,6 +351,7 @@
             </aside>
         </section>
 
+        <!-- ======= BLOG GRID SECTION ======= -->
         <section class="blog-grid">
 
             <article class="blog-grid__card">
@@ -504,6 +513,7 @@
 
         </section>
 
+        <!-- ======= PAGINATION SECTION ======= -->
         <section class="page-numbers">
             <ul class="page-numbers__list">
                 <li class="list__item"><a class="list__item-anchor" href="#"><i class="ri-arrow-left-s-line"></i></a>
@@ -512,7 +522,7 @@
                 <li class="list__item list__item--active"><a class="list__item-anchor" href="#">2</a></li>
                 <li class="list__item"><a class="list__item-anchor" href="#">3</a></li>
                 <li class="list__item"><a class="list__item-anchor" href="#">4</a></li>
-                <li class="list__item"><a class="list__item-anchor" href="#">...</a></li>
+                <li class="list__item">...</li>
                 <li class="list__item"><a class="list__item-anchor" href="#">10</a></li>
                 <li class="list__item"><a class="list__item-anchor" href="#"><i class="ri-arrow-right-s-line"></i></a>
                 </li>

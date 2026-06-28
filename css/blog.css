@@ -10,6 +10,8 @@
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
     --transition-smooth: 0.3s ease-out;
     --icon-size: 16px;
+    --card-radius: 15px;
+    --surface-border: rgba(0, 0, 0, 0.08);
 }
 
 /* ======= Blog HERO ======= */
@@ -92,9 +94,10 @@
 }
 
 .article-card__image-wrapper {
+    /* ======= ARTICLE IMAGE WRAPPER ======= */
     position: relative;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: var(--radius-small);
     overflow: hidden;
 }
 
@@ -126,12 +129,13 @@
 .article-card__badge,
 .sibling-card__badge,
 .trending-card__badge {
+    /* ======= BADGE STYLES ======= */
     background-color: var(--accent);
     color: var(--contrast);
     font-size: 0.8rem;
     width: max-content;
     margin-right: 1rem;
-    border-radius: var(--radius-large);
+    border-radius: var(--pill-radius);
     padding: 0.4rem 0.9rem;
 }
 
@@ -173,10 +177,11 @@
 }
 
 .sibling-card .sibling-card__image {
+    /* ======= SIBLING CARD IMAGE ======= */
     width: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--radius-small) var(--radius-small) 0 0;
 }
 
 .sibling-card__heading {
@@ -195,25 +200,38 @@
 .news-tabs {
     display: flex;
     justify-content: center;
-    gap: 1rem;
     margin: 1rem;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.news-tabs__item {
-    border: none;
-    transition: all 0.3s ease-out;
-    background: transparent;
-    padding: 0.7rem;
-    cursor: pointer;
-    font-weight: bolder;
+.news-tabs__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.news-tabs__item--active {
+.news-tabs__item {
+    list-style: none;
+    width: max-content;
+}
+
+.news-tabs__button {
+    border: none;
+    border-radius: var(--radius-large);
+    background: transparent;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all var(--transition-smooth);
+}
+
+.news-tabs__button--active {
     color: var(--contrast);
     background-color: var(--accent);
-    border-radius: var(--radius-large);
 }
 
 .news-layout__sidebar-list {
@@ -236,6 +254,7 @@
 }
 
 .trending-card {
+    /* ======= TRENDING CARD ======= */
     display: none;
     justify-content: flex-start;
     align-items: flex-start;
@@ -243,7 +262,7 @@
     gap: 1rem;
     width: 100%;
     max-width: 680px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--surface-border);
 }
 
 .trending-card:last-child {
@@ -261,10 +280,11 @@
 }
 
 .trending-card__image {
+    /* ======= TRENDING IMAGE ======= */
     width: 120px;
     min-width: 120px;
     height: 90px;
-    border-radius: 12px;
+    border-radius: var(--radius-small);
     object-fit: cover;
     object-position: center;
     flex-shrink: 0;
@@ -295,21 +315,24 @@
 }
 
 .blog-grid__card {
+    /* ======= BLOG GRID CARD ======= */
     display: flex;
     overflow: hidden;
     width: 100%;
+    height: 100%;
     position: relative;
     box-shadow: var(--shadow-soft);
-    border-radius: 15px;
+    border-radius: var(--card-radius);
     flex-direction: column;
 }
 
 .blog-card__image {
+    /* ======= BLOG CARD IMAGE ======= */
     width: 100%;
-    transition: all 0.3s ease-out;
+    transition: all var(--transition-smooth);
     transform: scale(1);
     margin-bottom: 1rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: var(--radius-small) var(--radius-small) 0 0;
     object-fit: cover;
     object-position: center;
 }
@@ -333,6 +356,7 @@
 }
 
 .blog-card__date {
+    /* ======= BLOG CARD DATE BADGE ======= */
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -340,7 +364,7 @@
     align-items: center;
     color: var(--contrast);
     background-color: var(--accent);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     padding: 0.8rem 0.5rem;
 }
 
@@ -395,7 +419,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem 0;
+    margin: 3rem 0;
 }
 
 .page-numbers__list {
@@ -432,7 +456,14 @@
 
 .list__item:nth-child(6) {
     border: none;
-    font-size: 2.5rem;
+    color: black;
+    font-size: 2rem;
+}
+
+.list__item:nth-child(6):hover,
+.list__item:nth-child(6):focus {
+    color: black;
+    background-color: var(--contrast);
 }
 
 .list__item-anchor {
@@ -490,11 +521,12 @@
     }
 
     .news-tabs {
-        display: flex;
-        gap: 1rem;
         margin-left: 140px;
         justify-content: flex-start;
-        flex-wrap: wrap;
+    }
+
+    .news-tabs__list {
+        justify-content: flex-start;
     }
 
     .news-layout__sidebar {
@@ -510,17 +542,17 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .trending-card {
-        width: 60%;
-        max-width: 680px;
-    }
-
     .news-layout {
         display: flex;
+        margin: 3rem 0 3rem 0;
         gap: 0;
         align-items: flex-start;
         justify-content: center;
         flex-direction: row;
+    }
+
+    .trending-card {
+        width: 100%;
     }
 
     .trending-card__image {
@@ -530,10 +562,13 @@
     }
 
     .news-tabs {
+        margin-left: 0;
+    }
+
+    .news-tabs__list {
         display: grid;
         gap: 1rem;
-        margin-left: 165px;
-        grid-template-columns: repeat(2, 120px);
+        grid-template-columns: repeat(2, minmax(0, 120px));
     }
 
     .trending-card__author {
@@ -542,7 +577,8 @@
 
     .news-layout__sidebar {
         justify-content: flex-start;
-        width: 75%;
+        width: 50%;
+        margin-top: 0;
         align-items: flex-start;
     }
 
@@ -551,9 +587,8 @@
         gap: 0.5rem;
     }
 
-
     .article-card {
-        width: 90%;
+        width: 80%;
     }
 
     .article-card__image-wrapper img {
@@ -579,12 +614,24 @@
     }
 
     .news-layout__grid {
-        width: 90%;
+        width: 80%;
         flex-direction: row;
     }
 
     .sibling-card__author {
         font-size: 0.8rem;
+    }
+
+    .trending-card__heading {
+        width: 70%;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
     }
 
 }
