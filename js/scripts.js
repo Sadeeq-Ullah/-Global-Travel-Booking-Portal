@@ -136,7 +136,7 @@ if (filter && filter[0] && cardsgrid) {
 const blogFilterBtns = document.querySelectorAll(".news-tabs button")
 const blogArticles = document.querySelectorAll(".news-layout__sidebar-list article")
 
-if (blogArticles && blogFilterBtns) {
+if (blogArticles && blogFilterBtns && blogFilterBtns[0]) {
     blogFilterBtns.forEach(filterButton => {
         filterButton.addEventListener("click", () => {
             blogFilterBtns.forEach(removeBtn => {
@@ -159,5 +159,5 @@ if (blogArticles && blogFilterBtns) {
         })
     })
 
-    blogFilterBtns[0].click()
+    blogFilterBtns[0].click();
 }

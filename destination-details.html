@@ -327,23 +327,33 @@
                 <p class="photo-gallery__description">Glimpses of natural beauty and cultural richness</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-photo-wrapper">
+                <div class="gallery-photo-wrapper gallery-pic-1">
                     <img src="./img/travel/showcase-5.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
-                <div class="gallery-photo-wrapper">
+                <div class="gallery-photo-wrapper gallery-pic-2">
                     <img src="./img/travel/destination-9.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
-                <div class="gallery-photo-wrapper">
+                <div class="gallery-photo-wrapper gallery-pic-3">
                     <img src="./img/travel/destination-13.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
-                <div class="gallery-photo-wrapper">
+                <div class="gallery-photo-wrapper gallery-pic-4">
                     <img src="./img/travel/destination-16.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
-                <div class="gallery-photo-wrapper">
+                <div class="gallery-photo-wrapper gallery-pic-5">
                     <img src="./img/travel/destination-18.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
             </div>
         </article>
+
+        <article class="start-journey">
+            <h1 class="start-journey__heading">Ready to Start Your Journey?</h1>
+            <p class="start-journey__description">Let our travel experts help you create the perfect Bali experience tailored to your preferences and budget.</p>
+            <div class="start-journey__buttons">
+                <a href="/tours.html" class="strjour-buttons__explore-tours">Explore Tours</a> 
+                <a href="/contact.html" class="strjour-buttons__contact-experts">Contact Expert</a> 
+            </div>
+        </article>
+
         <footer id="footer">
             <div class="footer__container">
                 <div class="footer__top">
@@ -473,8 +483,6 @@
                         </ul>
                     </div>
                 </div>
-
-
             </div>
             <div class="footer__bottom">
                 <div class="footer__bottom-content">
@@ -499,13 +507,21 @@
             </div>
         </footer>
     </main>
-    <script type="module" src="js/scripts.js" defer></script>
     <a class="page-scrolled" href="#"><svg class="upper-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             fill="currentColor">
             <path
                 d="M13.0001 22.0003L11.0002 22.0004L11.0002 5.82845L7.05044 9.77817L5.63623 8.36396L12.0002 2L18.3642 8.36396L16.9499 9.77817L13.0002 5.8284L13.0001 22.0003Z">
             </path>
-        </svg></a>
+        </svg>
+    </a>
+    <div id="lightbox-effect">
+        <div class="closebtn-wrapper">
+            <button class="lightbox-effect__closebtn">✕</button>
+        </div>
+        <div class="lightbox-effect__slider"></div>
+    </div>
+    <script type="module" src="js/scripts.js" defer></script>
+    <script type="module" src="js/slider.js" defer></script>
 </body>
 
 </html>

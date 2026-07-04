@@ -1529,8 +1529,8 @@ body.top-jump {
     height: 1.5em;
     background-color: rgb(229 226 224 / 13%);
     position: absolute;
-    top: -0.8rem;
-    left: -11px;
+    top: -0.4rem;
+    left: -8px;
 }
 
 .footer__bottom {
