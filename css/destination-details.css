@@ -30,7 +30,7 @@ body {
     height: 100%;
 }
 
-/* ======= Destination Details HERO ======= */
+/* ======= Base & Shared ======= */
 .destination-details-hero {
     display: flex;
     justify-content: center;
@@ -76,17 +76,16 @@ body {
     color: var(--contrast);
 }
 
-/* Body */
-
+/* ======= Overview & Hero ======= */
 .indonesia-photography {
     display: flex;
-    margin-top: 2rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    gap: calc(1.5rem - 4px);
+    margin-top: 2rem;
+    gap: 1.2rem;
 }
 
 .indonesia-photography__heading {
@@ -103,14 +102,13 @@ body {
 
 .indonesia-photography__image {
     width: 94%;
-    object-fit: cover;
-    margin: 1rem;
-    transition: all 0.3s ease-in-out;
-    transform: scale(1);
-    border-radius: 15px;
-    object-position: center;
     height: 350px;
-    margin-bottom: 2rem;
+    margin: 1rem 1rem 2rem;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
 }
 
 .indonesia-photography__image:hover,
@@ -120,10 +118,9 @@ body {
 
 .country-blog-post {
     display: flex;
-    align-content: center;
+    flex-direction: column;
     width: 92%;
     margin: 1rem;
-    flex-direction: column;
     gap: 2rem;
 }
 
@@ -134,11 +131,11 @@ body {
     gap: 1.5rem;
 }
 
-.text__heading {
+.country-blog-post__heading {
     font-weight: normal;
 }
 
-.text_description {
+.country-blog-post__description {
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 1px;
@@ -152,6 +149,7 @@ body {
     border-radius: 15px;
 }
 
+/* ======= Attractions ======= */
 .attractive-places {
     display: flex;
     margin: 1rem;
@@ -171,12 +169,12 @@ body {
     gap: 1.5rem;
 }
 
-.attrplaces-text__heading {
+.attractive-places__heading {
     font-weight: normal;
     text-align: center;
 }
 
-.attrplaces-text__description {
+.attractive-places__description {
     font-size: 1rem;
     color: var(--text);
     text-align: center;
@@ -217,6 +215,7 @@ body {
     font-weight: normal;
 }
 
+/* ======= Tours ======= */
 .available-tours {
     display: flex;
     justify-content: center;
@@ -233,12 +232,12 @@ body {
     gap: 1rem;
 }
 
-.avaitours-text__heading {
+.available-tours__heading {
     font-weight: normal;
     text-align: center;
 }
 
-.avaitours-text__description {
+.available-tours__description {
     text-align: center;
     color: var(--text);
     line-height: 1.5;
@@ -257,14 +256,13 @@ body {
 
 .available-tours__card {
     display: flex;
-    transition: all 0.3s ease-out;
-    transform: scale(1);
+    flex-direction: column;
     position: relative;
-    flex-direction: column;
-    overflow: hidden;
     gap: 1rem;
+    overflow: hidden;
     border-radius: 15px;
-    flex-direction: column;
+    transform: scale(1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .available-tours__card:hover {
@@ -306,7 +304,6 @@ body {
 
 .travel-information__heading {
     text-align: center;
-    font-size: 2.5rem;
     font-weight: normal;
 }
 
@@ -369,6 +366,7 @@ body {
     padding: 2rem 1.7rem;
 }
 
+/* ======= Information & Gallery ======= */
 .travel-information {
     display: flex;
     justify-content: center;
@@ -393,11 +391,11 @@ body {
 
 .travel-information__grid {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 1rem 1rem 1rem 2rem;
     align-items: center;
     gap: 1rem;
-    flex-direction: column;
+    margin: 1rem 1rem 1rem 2rem;
 }
 
 .travel-information__item {
@@ -429,6 +427,11 @@ body {
     background-color: #f95e4d21;
 }
 
+.lightbox-effect__left-arrow,
+.lightbox-effect__right-arrow {
+    display: none;
+}
+
 .travelinfo-body {
     display: flex;
     flex-direction: column;
@@ -457,8 +460,10 @@ body {
     padding: 1rem;
 }
 
-.gallery-photo-wrapper {
+.gallery-grid .gallery-photo-wrapper {
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .gallery-image {
@@ -477,7 +482,7 @@ body {
     align-items: center;
     flex-direction: column;
     z-index: 1000;
-    background-color: #000000cf;
+    background-color: black;
     overflow: hidden;
     inset: 0;
 }
@@ -486,6 +491,7 @@ body {
     display: flex;
     width: 100%;
     overflow: visible;
+    cursor: grab;
 }
 
 .lightbox-effect__slider .gallery-photo-wrapper {
@@ -494,13 +500,17 @@ body {
     flex-shrink: 0;
 }
 
-.lightbox-effect__slider .gallery-image {
+.gallery-photo-wrapper .gallery-image {
     object-fit: cover;
     object-position: center;
     animation: scaleeffect 0.5s;
     width: 100%;
     height: 250px;
     border-radius: 0;
+}
+
+.lightbox-image-grabbing {
+    cursor: grabbing;
 }
 
 #lightbox-effect.closing .gallery-image {
@@ -528,20 +538,20 @@ body {
 }
 
 .lightbox-effect__closebtn {
-    background-color: transparent;
-    border: none;
-    z-index: 1000;
-    font-size: 1.5rem;
     position: absolute;
-    background-color: black;
-    cursor: pointer;
-    border-radius: 15px;
-    padding: 1rem;
     top: 20px;
     right: 20px;
+    z-index: 1000;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: black;
     color: var(--contrast);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
+/* ======= Call To Action ======= */
 .start-journey {
     display: flex;
     justify-content: center;
@@ -647,11 +657,11 @@ body {
         flex-direction: row;
     }
 
-    .text__heading {
+    .country-blog-post__heading {
         font-size: 2.3rem;
     }
 
-    .text_description {
+    .country-blog-post__description {
         line-height: 2;
     }
 
@@ -693,28 +703,48 @@ body {
     .gallery-grid {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        grid-template-columns: 2fr 1fr 1fr;
         margin: 0 auto;
-        max-width: 820px;
-        grid-template-areas: 
-        "first-pic second-pic third-pic"
-        "first-pic fourth-pic fifth-pic";
+        max-width: 1100px;
+        grid-template-areas: "first-pic second-pic third-pic" "first-pic fourth-pic fifth-pic";
     }
 
     .gallery-pic-1 {
         grid-area: first-pic;
     }
+
     .gallery-pic-2 {
         grid-area: second-pic;
     }
+
     .gallery-pic-3 {
         grid-area: third-pic;
     }
+
     .gallery-pic-4 {
         grid-area: fourth-pic;
     }
+
     .gallery-pic-5 {
         grid-area: fifth-pic;
+    }
+
+    .gallery-grid .gallery-photo-wrapper img {
+        object-position: center center;
+        border-radius: 10px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1);
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+        display: block;
+    }
+
+
+    .gallery-grid .gallery-photo-wrapper img:hover {
+        transform: scale(1.05);
     }
 
     .lightbox-effect__slider .gallery-photo-wrapper {
@@ -739,13 +769,42 @@ body {
         padding: 0.5rem 1rem;
     }
 
-    .gallery-image {
-        object-fit: cover;
-        object-position: center center;
-        width: 100%;
-        height: 170px;
-        border-radius: 10px;
+    .lightbox-effect-track {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
     }
 
+    .lightbox-effect__left-arrow,
+    .lightbox-effect__right-arrow {
+        display: block;
+    }
+
+    .lightbox-effect__left-arrow .fa-angle-left,
+    .lightbox-effect__right-arrow .fa-angle-right {
+        position: absolute;
+        z-index: 999;
+        color: var(--contrast);
+        font-size: 2.3rem;
+        font-weight: 400;
+        background-color: #00000038;
+        border-radius: 15px;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .lightbox-effect__left-arrow .fa-angle-left {
+        left: 25px;
+    }
+
+    .lightbox-effect__right-arrow .fa-angle-right {
+        right: 25px;
+    }
+
+    .start-journey {
+        width: 60%;
+        margin-inline: auto;
+    }
 
 }

@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --accent: #f95e4d;
+    --contrast: #fff;
+    --text: #242424;
+    --radius: 20px;
+    --radius-small: 10px;
+    --radius-large: 40px;
+    --pill-radius: 30px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition-smooth: 0.3s ease-out;
+    --icon-size: 16px;
+    --card-radius: 15px;
+    --surface-border: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======= Base & Shared ======= */
+.tour-details-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/travel/showcase-11.webp) center / cover no-repeat;
+    height: 65vh;
+    color: var(--contrast);
+}
+
+.tour-details-hero__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.tour-details-hero__description {
+    text-align: center;
+    margin: 15px 0.5rem;
+    line-height: 1.5;
+}
+
+/* ======= Tours Details BREADCRUMB ======= */
+.tour-details-hero__main-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coloured-page,
+.center-page {
+    text-decoration: none;
+}
+
+.coloured-page {
+    color: var(--accent);
+}
+
+.center-page {
+    color: var(--contrast);
+}
+
+/* Main Body */
+
+.cost-discovery {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-inline: auto;
+    width: 94%;
+    padding-block: 20%;
+}
+
+.cost-discovery__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    height: 60vh;
+    filter: brightness(0.8);
+    min-height: 400px;
+    border-radius: 16px;
+}
+
+.cost-discovery__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 115px;
+    left: 15px;
+    color: var(--contrast);
+}
+
+.cost-body__badge {
+    border-radius: 30px;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.cost-body__heading {
+    font-weight: normal;
+    font-size: 2.6rem;
+}
+
+.cost-body__description {
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.cost-body__labels-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cost-labels-list__item {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.essence-italy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.essence-italy__article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.essence-article__heading {
+    font-weight: normal;
+    text-align: center;
+}
+
+.essence-article__description,
+.essence-article__feature-descrption {
+    letter-spacing: 1px;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.essence-article__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.essence-article__feature {
+    display: flex;
+    gap: 14px;
+    font-size: 1rem;
+}
+
+.essence-article__feature-icon {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.card-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: auto;
+    padding-block: 40px;
+    width: 100%;
+    border-radius: 25px;
+    margin-block: 40px;
+    box-shadow: var(--shadow-soft);
+    gap: 1.8rem;
+}
+
+.card-amount__text,
+.amount-cancellation__text {
+    color: grey;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.card-amount__text-value {
+    color: var(--accent);
+    font-size: 3rem;
+    font-family: "Segoe UI", -apple-system Helvetica, Arial, sans-serif;
+}
+
+.reserve-journey-btn {
+    color: var(--contrast);
+    border-radius: 30px;
+    background-color: var(--accent);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+}
+
+.amount-cancellation {
+    display: flex;
+    gap: 12px;
+    padding-top: 1rem;
+    border-top: 1px solid #80808057;
+}
+
+.amount-cancellation .fa-shield-halved {
+    color: var(--accent);
+    font-size: 1.1rem;
+}

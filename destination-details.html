@@ -18,12 +18,12 @@
 
 <body class="page__body">
     <main class="main" id="main">
+        <!-- ======= HEADER ======= -->
         <header class="header" id="header">
             <h1 class="header__heading"><a href="index.html">Travel Booking</a></h1>
             <nav class="header__nav" id="navmenu">
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="index.html">Home</a></li>
-                    <li class="header__nav-item"><a href="destinations.html">destinations</a></li>
                     <li class="header__nav-item"><a href="destinations.html">Destinations</a></li>
                     <li class="header__nav-item"><a href="tours.html">Tours</a></li>
                     <li class="header__nav-item"><a href="gallery.html">Gallery</a></li>
@@ -68,6 +68,8 @@
                 </svg>
             </div>
         </header>
+
+        <!-- ======= HERO SECTION ======= -->
         <section class="destination-details-hero">
             <h1 class="destination-details-hero__title">Destination Details</h1>
             <p class="destination-details-hero__description">
@@ -81,16 +83,18 @@
             </div>
         </section>
 
-        <article class="indonesia-photography">
+        <!-- ======= HIGHLIGHT SECTION ======= -->
+        <section class="indonesia-photography">
             <h1 class="indonesia-photography__heading">Bali, Indonesia</h1>
             <h3 class="indonesia-photography__title">Island of Gods</h3>
             <img src="./img/travel/showcase-3.webp" alt="Island Image" class="indonesia-photography__image">
-        </article>
+        </section>
 
-        <article class="country-blog-post">
+        <!-- ======= COUNTRY STORY SECTION ======= -->
+        <section class="country-blog-post">
             <div class="country-blog-post__text">
-                <h1 class="text__heading">Discover Paradise</h1>
-                <p class="text_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                <h2 class="country-blog-post__heading">Discover Paradise</h2>
+                <p class="country-blog-post__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -99,12 +103,13 @@
                     ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
             </div>
             <img src="./img/travel/destination-5.webp" alt="Post image" class="country-blog-post__image">
-        </article>
+        </section>
 
-        <article class="attractive-places">
+        <!-- ======= ATTRACTIVE PLACES SECTION ======= -->
+        <section class="attractive-places">
             <div class="attractive-places__text">
-                <h1 class="attrplaces-text__heading">Must-See Attractions</h1>
-                <p class="attrplaces-text__description">Explore the most captivating places and experiences</p>
+                <h2 class="attractive-places__heading">Must-See Attractions</h2>
+                <p class="attractive-places__description">Explore the most captivating places and experiences</p>
             </div>
             <div class="attractive-places__grid">
 
@@ -157,12 +162,13 @@
                 </div>
 
             </div>
-        </article>
+        </section>
 
-        <article class="available-tours">
+        <!-- ======= AVAILABLE TOURS SECTION ======= -->
+        <section class="available-tours">
             <div class="available-tours__text">
-                <h1 class="avaitours-text__heading">Available Tours</h1>
-                <p class="avaitours-text__description">Choose from our carefully crafted experiences</p>
+                <h2 class="available-tours__heading">Available Tours</h2>
+                <p class="available-tours__description">Choose from our carefully crafted experiences</p>
             </div>
             <div class="available-tours__grid">
 
@@ -241,10 +247,10 @@
                 </div>
 
             </div>
-            </div>
-        </article>
+        </section>
 
-        <article class="travel-information">
+        <!-- ======= TRAVEL INFORMATION SECTION ======= -->
+        <section class="travel-information">
             <div class="travel-information__text">
                 <h2 class="travel-information__heading">Travel Information</h2>
                 <p class="travel-information__description">Essential details for planning your trip</p>
@@ -319,9 +325,10 @@
                 </div>
 
             </div>
-        </article>
+        </section>
 
-        <article class="photo-gallery">
+        <!-- ======= PHOTO GALLERY SECTION ======= -->
+        <section class="photo-gallery">
             <div class="photo-gallery__text">
                 <h1 class="photo-gallery__heading">Photo Gallery</h1>
                 <p class="photo-gallery__description">Glimpses of natural beauty and cultural richness</p>
@@ -343,17 +350,20 @@
                     <img src="./img/travel/destination-18.webp" alt="Gallery Scene Photo" class="gallery-image">
                 </div>
             </div>
-        </article>
+        </section>
 
-        <article class="start-journey">
+        <!-- ======= CALL TO ACTION SECTION ======= -->
+        <section class="start-journey">
             <h1 class="start-journey__heading">Ready to Start Your Journey?</h1>
-            <p class="start-journey__description">Let our travel experts help you create the perfect Bali experience tailored to your preferences and budget.</p>
+            <p class="start-journey__description">Let our travel experts help you create the perfect Bali experience
+                tailored to your preferences and budget.</p>
             <div class="start-journey__buttons">
-                <a href="/tours.html" class="strjour-buttons__explore-tours">Explore Tours</a> 
-                <a href="/contact.html" class="strjour-buttons__contact-experts">Contact Expert</a> 
+                <a href="/tours.html" class="strjour-buttons__explore-tours">Explore Tours</a>
+                <a href="/contact.html" class="strjour-buttons__contact-experts">Contact Expert</a>
             </div>
-        </article>
+        </section>
 
+        <!-- ======= FOOTER ======= -->
         <footer id="footer">
             <div class="footer__container">
                 <div class="footer__top">
@@ -518,7 +528,15 @@
         <div class="closebtn-wrapper">
             <button class="lightbox-effect__closebtn">✕</button>
         </div>
-        <div class="lightbox-effect__slider"></div>
+        <div class="lightbox-effect-track">
+            <div class="lightbox-effect__left-arrow">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="lightbox-effect__slider"></div>
+            <div class="lightbox-effect__right-arrow">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
     </div>
     <script type="module" src="js/scripts.js" defer></script>
     <script type="module" src="js/slider.js" defer></script>
