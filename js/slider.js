@@ -309,6 +309,136 @@ if (lightBoxSlider && galleryPics.length > 0) {
     });
 }
 
+// Tour Section
+
+// Gallery Section 
+const galleryItems = document.querySelectorAll(".moments-images-wrapper");
+const lightboxSlider = document.querySelector(".lightbox-effect__slider");
+const lightboxOverlay = document.getElementById("lightbox-effect");
+const galleryContainer = document.querySelector(".moments-remember__images");
+const closeButton = document.querySelector(".lightbox-effect__closebtn");
+const prevButton = document.querySelector(".lightbox-effect__left-arrow");
+const nextButton = document.querySelector(".lightbox-effect__right-arrow");
+
+
+if (lightboxSlider && galleryItems.length > 0) {
+    galleryItems.forEach((galleryItem, itemIndex) => {
+        galleryItem.addEventListener("click", () => {
+
+            lightboxOverlay.style.display = "flex";
+            document.documentElement.classList.add("html-flow");
+            lightboxSlider.innerHTML = galleryContainer.innerHTML;
+
+            closeButton.addEventListener("click", () => {
+                lightboxOverlay.classList.add("closing");
+                document.documentElement.classList.remove("html-flow");
+
+                // 2. Wait 500ms for the image animation to finish, then hide everything
+                setTimeout(() => {
+                    lightboxOverlay.style.display = "none";
+                    lightboxOverlay.classList.remove("closing"); // Reset class for next open
+                }, 300);
+            });
+
+            // Using your gallery elements for the slider logic
+            let currentIndex = itemIndex;
+            lightboxSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            lightboxSlider.style.transition = "none";
+            const totalItems = galleryItems.length;
+            prevButton.addEventListener("click", () => {
+                currentIndex--;
+                lightboxSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                lightboxSlider.style.transition = "all 500ms ease";
+            })
+            nextButton.addEventListener("click", () => {
+                if (currentIndex < totalItems - 1) {
+                    currentIndex++;
+                    lightboxSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    lightboxSlider.style.transition = "all 500ms ease";
+                };
+                return;
+            })
+            // DRAG FUNCTIONALITY
+            let startX = 0;
+            let isDragging = false;
+            let sliderWidth = 0; 
+
+            function dragStart(e) {
+                e.preventDefault();
+
+                if (e.type === 'touchstart') {
+                    startX = e.touches[0].clientX;
+                } else {
+                    startX = e.clientX;
+                }
+
+                sliderWidth = lightboxSlider.offsetWidth;
+                lightboxSlider.style.transition = 'none';
+                isDragging = true;
+                lightboxSlider.classList.add('lightbox-image-grabbing');
+            }
+
+            function dragMove(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+
+                let currentX;
+                if (e.type === 'touchmove') {
+                    currentX = e.touches[0].clientX;
+                } else {
+                    currentX = e.clientX;
+                }
+
+                let distance = currentX - startX;
+                let percentageMoved = (distance / sliderWidth) * 100;
+                let newPosition = (currentIndex * 100) - percentageMoved;
+
+                lightboxSlider.style.transform = `translateX(-${newPosition}%)`;
+            }
+
+            function dragEnd(e) {
+                if (!isDragging && currentIndex < totalItems - 1) return;
+                isDragging = false;
+                lightboxSlider.classList.remove('lightbox-image-grabbing');
+
+                lightboxSlider.style.transition = 'transform 500ms ease';
+
+                let finalX;
+                if (e.type === 'touchend') {
+                    finalX = e.changedTouches[0].clientX;
+                } else {
+                    finalX = e.clientX;
+                }
+
+                let totalDistance = finalX - startX;
+                let threshold = sliderWidth * 0.2;
+
+                if (totalDistance > threshold) {
+                    currentIndex -= 1;
+                } else if (totalDistance < -threshold && currentIndex < totalItems - 1) {
+                    currentIndex += 1;
+                }
+                lightboxSlider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            lightboxSlider.addEventListener('mousedown', dragStart);
+            lightboxSlider.addEventListener('mousemove', dragMove);
+            lightboxSlider.addEventListener('mouseup', dragEnd);
+            lightboxSlider.addEventListener('mouseleave', dragEnd);
+
+            lightboxSlider.addEventListener('touchstart', dragStart);
+            lightboxSlider.addEventListener('touchmove', dragMove);
+            lightboxSlider.addEventListener('touchend', dragEnd);
+
+            document.addEventListener('touchmove', function (e) {
+                if (isDragging) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        });
+    });
+}
+
 
 
 

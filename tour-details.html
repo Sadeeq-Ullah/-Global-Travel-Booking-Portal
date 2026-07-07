@@ -151,9 +151,9 @@
             </div>
         </section>
 
-        <section class="journey-unfolds">
+        <section id="journey-unfolds">
+            <h1 class="journey-unfolds__heading">Your Journey Unfolds</h1>
             <ol class="journey-unfolds__places">
-
                 <li class="unfolds-places__place">
                     <div class="unfold-place__serial">01</div>
                     <div class="unfold-place__body">
@@ -264,7 +264,8 @@
                     <ul class="facilities-additional__list">
                         <li class="additional-list__item"><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
                             International flights to/from Italy</li>
-                        <li class="additional-list__item"><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i> Travel
+                        <li class="additional-list__item"><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+                            Travel
                             insurance (recommended)</li>
                         <li class="additional-list__item"><i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
                             Lunches and personal dining choices</li>
@@ -278,7 +279,174 @@
                 </div>
             </article>
         </section>
+
+        <section class="departure-dates">
+            <h1 class="departure-dates__heading">2024 Departure Dates</h1>
+            <div class="departure-dates__body">
+
+                <ul class="departure-dates__cards-list">
+                    <li class="departure-card">
+                        <div class="departure-card__time">
+                            <p class="departure-card__month">April</p>
+                            <p class="departure-card__dates">15 - 24</p>
+                        </div>
+                        <div class="departure-card__price-block">
+                            <p class="departure-card__price">€3,450</p>
+                            <span class="departure-card__status departure-card__status--available">Available</span>
+                        </div>
+                    </li>
+
+                    <li class="departure-card">
+                        <div class="departure-card__time">
+                            <p class="departure-card__month">May</p>
+                            <p class="departure-card__dates">20 - 29</p>
+                        </div>
+                        <div class="departure-card__price-block">
+                            <p class="departure-card__price">€3,650</p>
+                            <span class="departure-card__status departure-card__status--limited">4 spots left</span>
+                        </div>
+                    </li>
+
+                    <li class="departure-card">
+                        <div class="departure-card__time">
+                            <p class="departure-card__month">June</p>
+                            <p class="departure-card__dates">10 - 19</p>
+                        </div>
+                        <div class="departure-card__price-block">
+                            <p class="departure-card__price">€3,850</p>
+                            <span class="departure-card__status departure-card__status--available">Available</span>
+                        </div>
+                    </li>
+
+                    <li class="departure-card">
+                        <div class="departure-card__time">
+                            <p class="departure-card__month">September</p>
+                            <p class="departure-card__dates">5 - 14</p>
+                        </div>
+                        <div class="departure-card__price-block">
+                            <p class="departure-card__price">€3,750</p>
+                            <span class="departure-card__status departure-card__status--available">Available</span>
+                        </div>
+                    </li>
+
+                    <li class="departure-card">
+                        <div class="departure-card__time">
+                            <p class="departure-card__month">October</p>
+                            <p class="departure-card__dates">15 - 24</p>
+                        </div>
+                        <div class="departure-card__price-block">
+                            <p class="departure-card__price">€3,550</p>
+                            <span class="departure-card__status departure-card__status--limited">2 spots left</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <aside class="departure-form-panel">
+                    <h2 class="departure-form-panel__heading">Secure Your Place</h2>
+                    <form class="departure-form" action="/submit-data" method="post">
+                        <div class="form-group">
+                            <label for="departure-date">Preferred Departure</label>
+                            <select required name="departure-date" id="departure-date">
+                                <option value="" disabled selected>Select Departure Date</option>
+                                <option value="April 15-24">April 15-24, 2024</option>
+                                <option value="May 20-29">May 20-29, 2024</option>
+                                <option value="June 10-19">June 10-19, 2024</option>
+                                <option value="September 5-14">September 5-14, 2024</option>
+                                <option value="October 15-24">October 15-24, 2024</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers-number">Number of Travelers</label>
+                            <select name="travelers-number" id="travelers-number">
+                                <option value="" disabled selected>Select travelers</option>
+                                <option value="1-person">1 Person</option>
+                                <option value="2-person">2 Person</option>
+                                <option value="3-person">3 Person</option>
+                                <option value="4-person">4 Person</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Phone Number</label>
+                            <input type="tel" name="tel" id="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="special-notes">Special Requests</label>
+                            <textarea name="message" id="special-notes" rows="3" class="form-control"
+                                placeholder="Dietary requirements, celebrations, accessibility needs..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit Booking Request</button>
+                    </form>
+                    <div class="departure-form-panel__bottom-meta">
+                        <div class="secure-process">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <p class="secure-text">Secure booking process</p>
+                        </div>
+                        <div class="expert-consultant">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <p class="expert-consultant-text">Expert travel consultants</p>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+        <section class="moments-remember">
+            <h1 class="moments-remember__heading">Moments to Remember</h1>
+            <div class="moments-remember__images">
+                <div class="moments-images-wrapper moment-pic-1">
+                    <img src="./img/travel/destination-4.webp" alt="Italian Countryside" class="moment-image">
+                </div>
+                <div class="moments-images-wrapper moment-pic-2">
+                    <img src="./img/travel/destination-5.webp" alt="Historic Architecture" class="moment-image">
+                </div>
+                <div class="moments-images-wrapper moment-pic-3">
+                    <img src="./img/travel/destination-6.webp" alt="Coastal Views" class="moment-image">
+                </div>
+                <div class="moments-images-wrapper moment-pic-4">
+                    <img src="./img/travel/tour-8.webp" alt="Cultural Experience" class="moment-image">
+                </div>
+                <div class="moments-images-wrapper moment-pic-5">
+                    <img src="./img/travel/tour-9.webp" alt="Local Cuisine" class="moment-image">
+                </div>
+                <div class="moments-images-wrapper moment-pic-6">
+                    <img src="./img/travel/tour-10.webp" alt="Scenic Landscapes" class="moment-image">
+                </div>
+            </div>
+        </section>
     </main>
+    <section id="lightbox-effect">
+        <div class="closebtn-wrapper">
+            <button class="lightbox-effect__closebtn">✕</button>
+        </div>
+        <div class="lightbox-effect-track">
+            <div class="lightbox-effect__left-arrow">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="lightbox-effect__slider"></div>
+            <div class="lightbox-effect__right-arrow">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-card">
+        <h1 id="booking-card__heading">Your Italian Odyssey Awaits</h1>
+        <p id="booking-card__description">Embark on a journey that transcends ordinary travel. Let us craft memories
+            that will last a lifetime.</p>
+        <div id="booking-card__buttons">
+            <a id="booking-buttons__begin-btn" href="#">Begin Your Journey</a>
+            <a id="booking-buttons__contact-btn" href="#"><i class="fa-solid fa-phone"></i>Call +1 (855) 742-8639</a>
+        </div>
+    </section>
     <footer id="footer">
         <div class="footer__container">
             <div class="footer__top">
@@ -434,6 +602,7 @@
         </div>
     </footer>
     <script type="module" src="js/scripts.js" defer></script>
+    <script type="module" src="js/slider.js" defer></script>
     <a class="page-scrolled" href="#"><svg class="upper-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             fill="currentColor">
             <path
