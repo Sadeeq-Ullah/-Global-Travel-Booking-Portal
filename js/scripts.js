@@ -161,3 +161,33 @@ if (blogArticles && blogFilterBtns && blogFilterBtns[0]) {
 
     blogFilterBtns[0].click();
 }
+
+// Payment Cards Filter
+
+const paymentInputsWrapper = document.querySelectorAll('.form-inputs-group');
+const paymentCard = document.querySelectorAll(".payment-method");
+
+paymentCard.forEach(paymentway => {
+    paymentway.addEventListener("click", () => {
+
+        paymentCard.forEach(card => {
+            if (card === paymentway) {
+                card.classList.add("payment-method-clicked");
+            } else {
+                card.classList.remove("payment-method-clicked");
+            }
+        });
+
+        paymentInputsWrapper.forEach(paymentWrapper => {
+            if (paymentWrapper.dataset.method === paymentway.dataset.method) {
+                paymentWrapper.style.display = "flex";
+            } else {
+                paymentWrapper.style.display = "none";
+            }
+        });
+    });
+});
+
+if (paymentCard.length > 0) {
+    paymentCard[0].click();
+}

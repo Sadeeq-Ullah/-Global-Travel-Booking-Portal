@@ -920,6 +920,7 @@ body {
 
     #lightbox-effect {
         background-color: #000000cf;
+        width: 100%;
     }
 
     .lightbox-effect__closebtn {
@@ -931,6 +932,7 @@ body {
     .lightbox-effect-track {
         display: flex;
         position: relative;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
@@ -953,12 +955,25 @@ body {
         cursor: pointer;
     }
 
+    .lightbox-effect__slider .moments-images-wrapper {
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
     .lightbox-effect__left-arrow .fa-angle-left {
         left: 25px;
     }
 
     .lightbox-effect__right-arrow .fa-angle-right {
         right: 25px;
+    }
+
+    .lightbox-effect__slider {
+        display: flex;
+        width: 100%;
     }
 
     #booking-card__heading {
@@ -980,5 +995,6 @@ body {
     .moments-remember {
         padding-block: 10%;
     }
+
 
 }

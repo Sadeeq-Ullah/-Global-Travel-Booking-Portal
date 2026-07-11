@@ -772,8 +772,8 @@ body {
     .lightbox-effect-track {
         display: flex;
         position: relative;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
     .lightbox-effect__left-arrow,

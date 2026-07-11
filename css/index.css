@@ -1876,7 +1876,7 @@ body.top-jump {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
     .header__heading a {
         font-size: 1.7rem;
         line-height: 1.4;

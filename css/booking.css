@@ -19,6 +19,9 @@
     --icon-size: 16px;
     --card-radius: 15px;
     --surface-border: rgba(0, 0, 0, 0.08);
+    --border-soft: rgba(128, 128, 128, 0.42);
+    --text-muted: #161616d6;
+    --star-color: #b7ab09cf;
 }
 
 body {
@@ -26,7 +29,13 @@ body {
     height: 100%;
 }
 
+.main {
+    width: 100%;
+    height: 100%;
+}
+
 /* ======= Base & Shared ======= */
+/* ======= Booking Hero ======= */
 #booking-hero {
     display: flex;
     justify-content: center;
@@ -72,5 +81,548 @@ body {
     color: var(--contrast);
 }
 
-/* Main Body */
+/* ======= Booking Form Layout ======= */
+#tour-booking-details {
+    display: flex;
+    margin-inline: auto;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
 
+#tour-booking-form {
+    display: flex;
+    margin-inline: auto;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-soft);
+    gap: 1.5rem;
+    margin-block: 70px;
+    width: 93%;
+    padding-inline: 1rem;
+    height: 100%;
+    padding-block: 5rem;
+    flex-wrap: wrap;
+}
+
+.tour-form__step {
+    padding-bottom: 4rem;
+    border-bottom: 0.6px solid #8080803d;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.form-step__text {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.form-step__heading {
+    font-size: 1.4rem;
+}
+
+.form-step__description {
+    color: var(--text);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.form-step__fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    width: 100%;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    border-radius: 7px;
+    border: 1px solid var(--border-soft);
+    outline: none;
+    padding: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select:hover,
+input:hover,
+textarea:hover {
+    border: 1px solid var(--accent);
+}
+
+.sibling-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-inputs-group {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.optional-service {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: var(--radius-small);
+    padding: 1rem;
+    border: 1px solid var(--border-soft);
+    position: relative;
+    align-items: baseline;
+}
+
+.optional-service::after {
+    position: absolute;
+    content: "";
+    border: 1px solid #0000007a;
+    width: 3%;
+    height: 8%;
+}
+
+.optional-service::before {
+    position: absolute;
+    content: "\2713";
+    color: var(--contrast);
+    left: 18px;
+    top: 14.5px;
+    font-size: 0.7rem;
+}
+
+.optional-service:has([type="checkbox"]:checked)::before {
+    color: var(--contrast);
+    z-index: 2;
+}
+
+.optional-service:has([type="checkbox"]:checked)::after {
+    background-color: var(--accent);
+    border: none;
+    width: 13px;
+    height: 13px;
+}
+
+.optional-service:has([type="checkbox"]:checked) {
+    border: 1px solid var(--accent);
+}
+
+.optional-service [type="checkbox"] {
+    width: 10%;
+    opacity: 0;
+    position: relative;
+}
+
+.optional-service__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.optional-service__top-body {
+    display: flex;
+    font-family: var(--font);
+    gap: 0.7rem;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.optional-service__top-body i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.optional-service__sibling {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.optional-service__price {
+    color: var(--accent);
+    font-family: inherit;
+}
+
+.optional-service__price i {
+    margin: 0 -3px;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.optional-service__heading {
+    font-size: 1rem;
+}
+
+.optional-service__description {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.payment-gateways {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.payment-method {
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-small);
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.payment-method-clicked,
+.payment-method:hover {
+    border: 1px solid var(--accent);
+    background-color: #f95e4d0f;
+}
+
+.form-inputs-group {
+    display: none;
+}
+
+.payment-method__icon {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.payment-method__heading {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.payment-description {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-description i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.payment-description__text {
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    width: 15px;
+}
+
+.confirm-checkbox-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.confirm-checkbox__link {
+    color: var(--accent);
+}
+
+#submit-form {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--accent);
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    border-radius: 30px;
+    gap: 0.5rem;
+}
+
+#submit-form .fa-circle-check {
+    color: var(--contrast);
+    font-size: 1rem;
+}
+
+.submit-form__text {
+    font-weight: bolder;
+    font-size: 1rem;
+    color: var(--contrast);
+    letter-spacing: 1px;
+}
+
+/* ======= Booking Summary ======= */
+#booking-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 1.5rem;
+    padding-block: 3rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-soft);
+    margin-inline: auto;
+    margin-block-end: 3rem;
+    width: 93%;
+}
+
+.booking-summary__heading {
+    font-size: 1.3rem;
+    align-self: flex-start;
+}
+
+#booking-tour-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.booking-summary__tour-image {
+    object-fit: cover;
+    object-position: center;
+    width: 23%;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+}
+
+.booking-summary__tour-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.booking-summary__tour-heading {
+    font-size: 0.9rem;
+}
+
+.booking-summary__rating {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.booking-summary__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-summary__stars i {
+    font-size: 12px;
+    color: var(--star-color);
+}
+
+#booking-trip-details,
+#price-breakdown,
+.booking-summary__price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.booking-summary__detail-row,
+.booking-summary__price-row,
+#booking-total {
+    display: flex;
+    width: 100%;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.booking-summary__detail-row dd,
+.booking-summary__price-row dd {
+    font-weight: bolder;
+}
+
+.booking-summary__section-heading {
+    font-size: 1rem;
+}
+
+.booking-summary__total-label,
+.booking-summary__total-value {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    font-family: var(--font);
+}
+
+.booking-summary__trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.booking-summary__trust-badge {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.booking-summary__trust-badge i {
+    color: var(--accent);
+}
+
+.booking-summary__trust-badge span,
+.booking-summary__help-text {
+    font-size: 0.8rem;
+}
+
+#booking-help {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking-summary__contact-link {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    display: flex;
+    font-family: var(--font);
+    gap: 0.5rem;
+}
+
+.booking-summary__contact-link i {
+    color: var(--accent);
+}
+
+#booking-trip-details,
+#price-breakdown,
+.booking-summary__total {
+    border-top: 1px solid var(--surface-border);
+    padding-top: 2rem;
+    width: 100%;
+}
+
+/* ======= Responsive Layout ======= */
+@media screen and (min-width: 768px) {
+    #tour-booking-form {
+        width: 90%;
+    }
+
+    .sibling-group {
+        flex-direction: row;
+    }
+
+    .optional-service::after {
+        position: absolute;
+        content: "";
+        border: 1px solid #0000007a;
+        width: 10px;
+        height: 10px;
+    }
+
+    .payment-gateways {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .payment-description {
+        align-self: flex-start;
+        align-items: baseline;
+    }
+
+    .form-step__fields {
+        justify-content: start;
+        align-items: start;
+        gap: 0.5rem;
+    }
+
+    #booking-tour-info {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .booking-summary__tour-image {
+        width: 12%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        overflow: visible; 
+    }
+
+    #tour-booking-details {
+        flex-wrap: nowrap;
+        width: 85%;
+        align-items: flex-start;
+        margin-block: 70px;
+        gap: 2.5rem;
+        position: relative;
+    }
+
+    #booking-summary {
+        width: 40%;
+        align-items: flex-start;
+        position: sticky;
+        top: calc(70px + 1rem);
+    }
+
+    .booking-summary__tour-image {
+        width: 30%;
+    }
+
+    .booking-summary__tour-meta,
+    .booking-summary__rating-count,
+    .booking-summary__rating-value {
+        font-size: 0.80rem;
+    }
+
+    .booking-summary__trip-details,
+    .booking-summary__price-list {
+        font-size: 0.9rem;
+    }
+
+    #tour-booking-form {
+        padding-inline: 2rem;
+        margin-block: 0;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    .form-step__fields {
+        gap: 1.7rem;
+    }
+
+    .optional-service [type="checkbox"] {
+        width: 2%;
+    }
+}
