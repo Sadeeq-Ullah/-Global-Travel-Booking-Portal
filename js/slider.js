@@ -311,7 +311,6 @@ if (lightBoxSlider && galleryPics.length > 0) {
 
 // Tour Section
 
-// Gallery Section 
 const galleryItems = document.querySelectorAll(".moments-images-wrapper");
 const lightboxSlider = document.querySelector(".lightbox-effect__slider");
 const lightboxOverlay = document.getElementById("lightbox-effect");
@@ -358,10 +357,10 @@ if (lightboxSlider && galleryItems.length > 0) {
                 };
                 return;
             })
-            // DRAG FUNCTIONALITY
+
             let startX = 0;
             let isDragging = false;
-            let sliderWidth = 0; 
+            let sliderWidth = 0;
 
             function dragStart(e) {
                 e.preventDefault();
@@ -440,6 +439,7 @@ if (lightboxSlider && galleryItems.length > 0) {
 }
 
 
+// Logic Slider Testimonials
 
 
 
