@@ -332,10 +332,9 @@ if (lightboxSlider && galleryItems.length > 0) {
                 lightboxOverlay.classList.add("closing");
                 document.documentElement.classList.remove("html-flow");
 
-                // 2. Wait 500ms for the image animation to finish, then hide everything
                 setTimeout(() => {
                     lightboxOverlay.style.display = "none";
-                    lightboxOverlay.classList.remove("closing"); // Reset class for next open
+                    lightboxOverlay.classList.remove("closing");
                 }, 300);
             });
 
@@ -438,45 +437,161 @@ if (lightboxSlider && galleryItems.length > 0) {
     });
 }
 
-
 // Logic Slider Testimonials
 
+const track__card = document.querySelectorAll(".track-card");
+const originalCount = track__card.length;
+const testiTrack = document.querySelector("#testimonials-carousel__track");
+const radioBtns = document.querySelectorAll('.carousel-radiobtns input[type="radio"]');
 
+if (testiTrack && originalCount > 0) {
 
+    // LOGIC FIX 1: Set Clone Count to 3 globally (Covers desktop visibility cleanly)
+    const CLONE_COUNT = 3;
 
+    // Inject 3 Clones at the end (First 3 cards)
+    for (let i = 0; i < CLONE_COUNT; i++) {
+        testiTrack.append(track__card[i].cloneNode(true));
+    }
+    // Inject 3 Clones at the start (Last 3 cards) in reverse order to maintain sequence
+    for (let i = 1; i <= CLONE_COUNT; i++) {
+        testiTrack.prepend(track__card[originalCount - i].cloneNode(true));
+    }
 
+    // LOGIC FIX 2: Baseline starting position skips the 3 clones on the left
+    let currIndex = CLONE_COUNT;
+    let isDragging = false;
+    let startX = 0;
+    let autoTimer = null;
+    const AUTO_DELAY = 5000;
 
+    const card = track__card[0];
+    const gap = parseFloat(getComputedStyle(testiTrack).gap) || 0;
+    const step = card.offsetWidth + gap;
 
+    testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
+    testiTrack.style.transition = 'none';
 
+    function startAutoTimer() {
+        clearTimeout(autoTimer);
+        autoTimer = setTimeout(autoSlider, AUTO_DELAY);
+    }
 
+    radioBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            // LOGIC FIX 3: Radio index is offset by clone count
+            currIndex = index + CLONE_COUNT;
+            clearTimeout(autoTimer);
+            testiTrack.style.transition = 'transform 0.5s ease';
+            testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
+            startAutoTimer();
+            radioSliding(); // Fix: Force radio activation immediately on click
+        });
+    });
 
+    const radioSliding = () => {
+        if (radioBtns.length > 0) {
+            let radioIndex;
+            // LOGIC FIX 4: Recalculated lower/upper edge conditions for radios
+            if (currIndex < CLONE_COUNT) radioIndex = originalCount - (CLONE_COUNT - currIndex);
+            else if (currIndex >= originalCount + CLONE_COUNT) radioIndex = (currIndex - originalCount - CLONE_COUNT);
+            else radioIndex = currIndex - CLONE_COUNT;
 
+            // Safety boundaries for array access
+            radioIndex = (radioIndex + originalCount) % originalCount;
+            if (radioBtns[radioIndex]) radioBtns[radioIndex].checked = true;
+        }
+    }
 
+    function autoSlider() {
+        currIndex++;
+        testiTrack.style.transition = 'transform 0.5s ease';
+        testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
 
+        // LOGIC FIX 5: Snapping boundary adjusted
+        if (currIndex === originalCount + CLONE_COUNT) {
+            setTimeout(() => {
+                testiTrack.style.transition = 'none';
+                currIndex = CLONE_COUNT;
+                testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
+                startAutoTimer();
+                radioSliding();
+            }, 500);
+        } else {
+            startAutoTimer();
+            radioSliding();
+        }
+    }
 
+    startAutoTimer();
 
+    function dragStart(event) {
+        event.preventDefault();
+        startX = event.type === "touchstart" ? event.touches[0].clientX : event.clientX;
+        testiTrack.style.transition = "none";
+        isDragging = true;
+        track__card.forEach(iterator => {iterator.classList.add("track-card-dragging")});
+        clearTimeout(autoTimer);
+    }
+    
+    function dragMove(event) {
+        if (!isDragging) return;
+        event.preventDefault();
+        let currentX = event.type === "touchmove" ? event.touches[0].clientX : event.clientX;
+        const deltaX = currentX - startX;
+        const offsetPx = currIndex * step - deltaX;
+        testiTrack.style.transform = `translateX(-${offsetPx}px)`;
+    }
 
+    function dragEnd(event) {
+        if (!isDragging) return;
+        isDragging = false;
+        event.preventDefault();
+        track__card.forEach(iterator => {iterator.classList.remove("track-card-dragging")});
 
+        let finalX = event.type === "touchend" ? event.changedTouches[0].clientX : event.clientX;
+        const totalDistance = finalX - startX;
+        const threshold = step * 0.2;
 
+        if (totalDistance > threshold) currIndex--;
+        else if (totalDistance < -threshold) currIndex++;
 
+        // LOGIC FIX 6: Enforce upper boundary constraints relative to CLONE_COUNT
+        currIndex = Math.max(0, Math.min(currIndex, originalCount + CLONE_COUNT));
 
+        testiTrack.style.transition = 'transform 0.5s ease';
+        testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
 
+        // LOGIC FIX 7: Snap checks for Drag reset
+        if (currIndex <= CLONE_COUNT - 1) {
+            setTimeout(() => {
+                testiTrack.style.transition = 'none';
+                currIndex = originalCount + currIndex;
+                testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
+                startAutoTimer();
+            }, 500);
+        } else if (currIndex >= originalCount + CLONE_COUNT) {
+            setTimeout(() => {
+                testiTrack.style.transition = 'none';
+                currIndex = currIndex - originalCount;
+                testiTrack.style.transform = `translateX(-${currIndex * step}px)`;
+                startAutoTimer();
+            }, 500);
+        } else {
+            startAutoTimer();
+        }
+        radioSliding();
+    }
 
+    testiTrack.addEventListener("touchstart", dragStart);
+    testiTrack.addEventListener("touchmove", dragMove);
+    testiTrack.addEventListener("touchend", dragEnd);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    testiTrack.addEventListener("mousedown", dragStart);
+    testiTrack.addEventListener("mousemove", dragMove);
+    testiTrack.addEventListener("mouseup", dragEnd);
+    testiTrack.addEventListener("mouseleave", dragEnd);
+}
 
 
 

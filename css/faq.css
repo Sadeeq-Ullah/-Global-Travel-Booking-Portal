@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --accent: #f95e4d;
+    --contrast: #fff;
+    --text: #242424;
+    --text-muted: #5a5a5a;
+    --accent-soft: rgba(249, 94, 77, 0.12);
+    --accent-strong: #ff450085;
+    --faq-border: rgba(128, 128, 128, 0.28);
+    --radius: 20px;
+    --radius-small: 10px;
+    --radius-large: 40px;
+    --pill-radius: 30px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition-smooth: 0.3s ease-out;
+    --icon-size: 16px;
+    --card-radius: 15px;
+    --surface-border: rgba(0, 0, 0, 0.08);
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 10%;
+}
+
+body,
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======= Hero Section ======= */
+#faq-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--space-sm);
+    flex-direction: column;
+    gap: var(--space-sm);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/travel/showcase-11.webp) center / cover no-repeat;
+    height: 65vh;
+    color: var(--contrast);
+}
+
+.faq-hero__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.faq-hero__description {
+    text-align: center;
+    margin: 15px var(--space-xs);
+    line-height: 1.5;
+}
+
+/* ======= Hero Breadcrumb ======= */
+.faq-hero__main-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.coloured-page,
+.center-page {
+    text-decoration: none;
+}
+
+.coloured-page {
+    color: var(--accent);
+}
+
+.center-page {
+    color: var(--contrast);
+}
+
+/* ======= FAQ List ======= */
+.custom-ico i {
+    font-size: 0.9rem;
+}
+
+.faqs-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: var(--space-sm);
+    margin-inline: auto;
+    padding: var(--space-xl) var(--space-sm);
+}
+
+.faq-item {
+    padding: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--faq-border);
+    border-radius: var(--radius-small);
+    gap: var(--space-sm);
+    width: 100%;
+    cursor: pointer;
+    transition: border-color var(--transition-smooth);
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    line-height: 1.6;
+}
+
+.faq-description {
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.custom-ico {
+    color: var(--accent);
+    transition: transform var(--transition-smooth);
+}
+
+details[open] .custom-ico {
+    transform: rotate(45deg);
+}
+
+details[open] .faq-wrapper {
+    color: var(--accent);
+}
+
+/* ======= Contact CTA ======= */
+.query-source {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin: var(--space-xl) auto;
+    width: 90%;
+    padding: var(--space-lg);
+    background-color: var(--accent-soft);
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--card-radius);
+}
+
+.query-icon i {
+    font-size: 3rem;
+    color: var(--accent);
+}
+
+.query-heading {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.query-description {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.query-button {
+    text-decoration: none;
+    color: var(--contrast);
+    padding: var(--space-sm) 1.3rem;
+    border-radius: 7px;
+    font-weight: bolder;
+    background-color: var(--accent);
+}
+
+/* ======= Responsive Styles ======= */
+@media screen and (min-width: 768px) {
+    .faqs-list {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main-container {
+        display: flex;
+        width: 80%;
+        margin-inline: auto;
+        margin-block: 5%;
+        gap: 1.5rem;
+    }
+
+    .query-source {
+        width: 41%;
+        margin-block: 0;
+    }
+
+    .faq-item {
+        padding: 1.5rem;
+    }
+
+    .faq-wrapper {
+        font-size: 1.1rem;
+    }
+
+    .faqs-list {
+        padding: 0;
+    }
+}

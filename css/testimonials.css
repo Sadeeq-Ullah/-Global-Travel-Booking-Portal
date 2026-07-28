@@ -6,10 +6,14 @@
 }
 
 :root {
-    --font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
     --accent: #f95e4d;
     --contrast: #fff;
     --text: #242424;
+    --text-muted: #5a5a5a;
+    --rating-gold: #f7b50d;
+    --accent-soft: #ff44000c;
+    --accent-strong: #ff450085;
+    --border-soft: rgba(128, 128, 128, 0.295);
     --radius: 20px;
     --radius-small: 10px;
     --radius-large: 40px;
@@ -19,10 +23,6 @@
     --icon-size: 16px;
     --card-radius: 15px;
     --surface-border: rgba(0, 0, 0, 0.08);
-}
-
-.html-flow {
-    overflow: hidden;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
     height: 100%;
 }
 
-/* ======= Base & Shared ======= */
+/* ======= Hero Section ======= */
 #testimonilas-hero {
     display: flex;
     justify-content: center;
@@ -81,18 +81,17 @@ body {
     color: var(--contrast);
 }
 
-/* Main Body */
-
+/* ======= Testimonials Carousel ======= */
 #testimonials-carousel {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     width: 100%;
     padding: 1rem;
     padding-block: 10%;
 }
 
 .header-text__eyebrow {
-    color: #5a5a5a;
+    color: var(--text-muted);
     text-transform: uppercase;
     font-size: 0.9rem;
     position: relative;
@@ -121,7 +120,7 @@ body {
 #testimonials-carousel__track {
     display: flex;
     width: 100%;
-    overflow: scroll;
+    gap: 9px;
 }
 
 .track-card {
@@ -132,8 +131,13 @@ body {
     margin-block: 40px;
     flex-direction: column;
     width: 100%;
-    border-radius: 10px;
-    background-color: #ff44000c;
+    cursor: grab;
+    border-radius: var(--radius-small);
+    background-color: var(--accent-soft);
+}
+
+.track-card-dragging {
+    cursor: grabbing;
 }
 
 .user-meta-data__avatar {
@@ -145,7 +149,7 @@ body {
 }
 
 .rating-stars i {
-    color: #f7b50d;
+    color: var(--rating-gold);
 }
 
 .body-text {
@@ -179,6 +183,7 @@ body {
     display: inline-flex;
     gap: 0.5rem;
 }
+
 .carousel-radiobtns input[type="radio"] {
     outline: none;
     width: 10px;
@@ -214,4 +219,134 @@ body {
     width: 20px;
     border-radius: 10px;
     height: 7px;
+}
+
+/* ======= Review Cards ======= */
+#testimonial-reviews {
+    width: 100%;
+    padding: 1rem;
+}
+
+#review-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    gap: 2.7rem;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    padding: 2rem;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--card-radius);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.review-card:hover,
+.review-card:focus,
+.review-card:active {
+    transform: translateY(-4%);
+}
+
+.review-comment {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.user-meta {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.user-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user-name {
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.user-role {
+    font-size: 0.9rem;
+}
+
+.review-card--featured {
+    background-color: var(--accent-soft);
+    border: 1px solid var(--accent-strong);
+}
+
+
+.review-card::before {
+    content: "";
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    top: -17px;
+    background-color: var(--contrast);
+    z-index: 1;
+    left: 30px;
+    border: 1px solid #80808033;
+}
+
+.review-card::after {
+    position: absolute;
+    content: "“";
+    font-size: 2.5rem;
+    font-family: "Georgia", "Times New Roman", serif;
+    color: orangered;
+    top: -15px;
+    z-index: 2;
+    left: 37px;
+}
+
+.review-card--featured::before {
+    background-color: rgba(255, 69, 0, 0.188);
+}
+
+/* ======= Responsive Styles ======= */
+@media screen and (min-width: 768px) {
+    .track-card {
+        width: 47%;
+    }
+
+    #testimonials-carousel__track {
+        gap: 20px;
+    }
+
+    #review-cards {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .track-card {
+        width: 32%;
+    }
+
+    #testimonials-carousel {
+        max-width: 1100px;
+        overflow: hidden;
+        margin-inline: auto;
+    }
+
+    #review-cards {
+        width: 87%;
+        margin-inline: auto;
+    }
 }

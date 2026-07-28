@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: #f95e4d;
+    --contrast: #fff;
+    --text: #242424;
+    --text-muted: #5a5a5a;
+    --accent-soft: rgba(249, 94, 77, 0.12);
+    --accent-strong: #ff450085;
+    --faq-border: rgba(128, 128, 128, 0.28);
+    --radius: 20px;
+    --radius-small: 10px;
+    --radius-large: 40px;
+    --pill-radius: 30px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition-smooth: 0.3s ease-out;
+    --icon-size: 16px;
+    --card-radius: 15px;
+    --surface-border: rgba(0, 0, 0, 0.08);
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 10%;
+}
+
+body,
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======= Hero Section ======= */
+#section-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--space-sm);
+    flex-direction: column;
+    gap: var(--space-sm);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/travel/showcase-11.webp) center / cover no-repeat;
+    height: 65vh;
+    color: var(--contrast);
+}
+
+.section-hero__title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.section-hero__description {
+    text-align: center;
+    margin: 15px var(--space-xs);
+    line-height: 1.5;
+}
+
+/* ======= Hero Breadcrumb ======= */
+.section-hero__main-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.coloured-page,
+.center-page {
+    text-decoration: none;
+}
+
+.coloured-page {
+    color: var(--accent);
+}
+
+.center-page {
+    color: var(--contrast);
+}
+
+/* Body */
+
+#webdev-blog {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    .webdev-hero {
+        position: relative;
+        width: 100%;
+    }
+
+    .webdev__blog-image {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .webdev__meta {
+        display: flex;
+        left: 15px;
+        bottom: 1.5rem;
+        position: absolute;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        color: var(--contrast);
+    }
+
+    .webdev__domain {
+        background-color: var(--accent);
+        padding: 0.4rem 1rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+    }
+
+    .webdev__heading {
+        font-size: 2rem;
+    }
+
+    .user-meta {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .user-image {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    
+}
