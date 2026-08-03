@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="/css/blog-details.css">
-    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="css/blog-details.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <title>Blocking Details - Travel Booking</title>
+    <title>Blog Details - Travel Booking</title>
 </head>
 
 <body class="page__body">
@@ -65,7 +65,9 @@
             </svg>
         </div>
     </header>
+    <!-- Main Content -->
     <main class="main" id="main">
+        <!-- Hero -->
         <section id="section-hero">
             <h2 class="section-hero__title">Blog Details</h2>
             <p class="section-hero__description">
@@ -79,16 +81,17 @@
             </nav>
         </section>
 
+        <!-- Article Content -->
         <article id="webdev-blog">
-            <div class="webdev-hero">
+            <header class="webdev-hero">
                 <img src="./img/blog/blog-post-3.webp" alt="Two girls reading books together" class="webdev__blog-image"
-                    width="600" height="360" loading="lazy" decoding="async">
+                    width="600" height="360" decoding="async">
                 <div class="webdev__meta">
                     <span class="webdev__domain">Web Development</span>
                     <span class="webdev__blog-time">. <i class="fa-regular fa-clock" aria-hidden="true"></i> 6 min
                         read</span>
                 </div>
-            </div>
+            </header>
             <h2 class="webdev__heading">Modern Web Development: Best Practices and Future Trends for 2025</h2>
             <div class="webdev-meta">
                 <div class="user-meta">
@@ -128,41 +131,46 @@
                             web development.
                         </span>
                     </p>
-                    <div class="blog__content-image">
-                        <img src="./img/blog/blog-hero-2.webp" alt="blog showcase image" class="conent-image">
-                        <figcaption>Modern development environments emphasize collaboration and efficiency</figcaption>
-                    </div>
-                    <div class="blog__rise-webdev">
-                        <h2 class="rise-webdev__heading body-heading">The Rise of Web Components</h2>
-                        <p class="rise-webdev__mid-conent">Web Components have become increasingly crucial in modern web
-                            development, offering a standardized way to create reusable custom elements. Key advantages
-                            include:
-                        </p>
-                        <ul class="rising-points">
-                            <li class="rising-point">Enhanced code reusability across different frameworks</li>
-                            <li class="rising-point">Better encapsulation of functionality</li>
-                            <li class="rising-point">Improved maintenance and scalability</li>
-                            <li class="rising-point">Framework-agnostic component development</li>
-                        </ul>
-                    </div>
+                    <aside class="side-content">
+                        <figure class="blog__content-image">
+                            <img src="./img/blog/blog-hero-2.webp" alt="blog showcase image" class="conent-image">
+                            <figcaption>Modern development environments emphasize collaboration and efficiency
+                            </figcaption>
+                        </figure>
+                        <div class="blog__rise-webdev">
+                            <h2 class="rise-webdev__heading body-heading">The Rise of Web Components</h2>
+                            <p class="rise-webdev__mid-conent">Web Components have become increasingly crucial in modern
+                                web
+                                development, offering a standardized way to create reusable custom elements. Key
+                                advantages
+                                include:
+                            </p>
+                            <ul class="rising-points">
+                                <li class="rising-point">Enhanced code reusability across different frameworks</li>
+                                <li class="rising-point">Better encapsulation of functionality</li>
+                                <li class="rising-point">Improved maintenance and scalability</li>
+                                <li class="rising-point">Framework-agnostic component development</li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </section>
 
             <section class="key-trends">
-                <h3 class="key-trends__heading">Key Trends in 2025</h2>
-                    <ul class="key-trends__features">
-                        <li class="key-trend"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Edge Computing
-                                and
-                                Serverless
-                                Architecture</span></li>
-                        <li class="key-trend"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Enhanced
-                                Security
-                                Measures</span></li>
-                        <li class="key-trend"><i class="fa-regular fa-mobile" aria-hidden="true"></i><span>Progressive
-                                Web
-                                Apps (PWAs)</span>
-                        </li>
-                    </ul>
+                <h3 class="key-trends__heading">Key Trends in 2025</h3>
+                <ul class="key-trends__features">
+                    <li class="key-trend"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Edge Computing
+                            and
+                            Serverless
+                            Architecture</span></li>
+                    <li class="key-trend"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><span>Enhanced
+                            Security
+                            Measures</span></li>
+                    <li class="key-trend"><i class="fa-regular fa-mobile" aria-hidden="true"></i><span>Progressive
+                            Web
+                            Apps (PWAs)</span>
+                    </li>
+                </ul>
             </section>
 
             <section class="performance-opt">
@@ -259,14 +267,23 @@
                 </div>
                 <div class="author-contact">
                     <ul class="author-socials">
-                        <li class="author-social"><a href="#"><i class="fa-brands fa-x-twitter" aria-hidden="true"
-                                    title="Twitter"></i></a></li>
-                        <li class="author-social"><a href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"
-                                    title="LinkedIn"></i></a></li>
-                        <li class="author-social"><a href="#"><i class="fa-brands fa-reddit-alien" title="Reddit"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="author-social"><a href="#"><i class="fa-brands fa-github" title="Github"
-                                    aria-hidden="true"></i></a></li>
+                        <li class="author-social">
+                            <a href="#" aria-label="Visit our Twitter profile"><i class="fa-brands fa-x-twitter"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li class="author-social">
+                            <a href="#" aria-label="Visit our LinkedIn profile"><i class="fa-brands fa-linkedin"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li class="author-social">
+                            <a href="#" aria-label="Visit our Reddit profile"><i class="fa-brands fa-reddit-alien"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li class="author-social">
+                            <a href="#" aria-label="Visit our GitHub profile"><i class="fa-brands fa-github"
+                                    aria-hidden="true"></i></a>
+                        </li>
+
                     </ul>
 
                     <a href="#" class="author-cta">Connect with Alex <i class="fa-solid fa-arrow-right"
@@ -275,25 +292,24 @@
             </div>
         </section>
 
+        <!-- Community Feedback -->
         <section class="community-feedback" aria-labelledby="feedback-title">
             <div class="community-feedback__header">
                 <h2 id="feedback-title" class="community-feedback__heading">Community Feedback</h2>
-                <div class="community-feedback__count">4 Comments</div>
+                <p class="community-feedback__count"><strong class="comment-value">4</strong> Comments</p>
             </div>
 
             <ul class="comment-thread">
                 <li class="comment-thread__item">
                     <article class="comment-card">
-                        <img src="thomas-profile.jpg" alt="Thomas Anderson's profile picture"
+                        <img src="./img/person/person-f-9.webp" alt="Thomas Anderson's profile picture"
                             class="comment-card__avatar">
                         <div class="comment-card__body">
                             <div class="comment-card__header">
                                 <h3 class="comment-card__user-name">Thomas Anderson</h3>
-                                <div class="comment-card__stats">
-                                    <span class="comment-card__like-count">
-                                        <i class="fa-regular fa-heart" aria-hidden="true"></i> 24
-                                    </span>
-                                </div>
+                                <span class="comment-card__like-count">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i> 24
+                                </span>
                             </div>
                             <div class="comment-card__meta">
                                 <time datetime="PT2H" class="comment-card__duration">
@@ -314,7 +330,7 @@
                                             aria-hidden="true"></i> Reply</button>
                                 </li>
                                 <li class="comment-card__action-item">
-                                    <button type="button" class="comment-card__btn"><i class="fa-regular fa-share-nodes"
+                                    <button type="button" class="comment-card__btn"><i class="fa-solid fa-share-nodes"
                                             aria-hidden="true"></i> Share</button>
                                 </li>
                             </ul>
@@ -324,16 +340,14 @@
                     <ul class="comment-thread comment-thread--nested">
                         <li class="comment-thread__item">
                             <article class="comment-card">
-                                <img src="maria-profile.jpg" alt="Maria Rodriguez's profile picture"
+                                <img src="./img/person/person-m-9.webp" alt="Maria Rodriguez's profile picture"
                                     class="comment-card__avatar">
                                 <div class="comment-card__body">
                                     <div class="comment-card__header">
                                         <h3 class="comment-card__user-name">Maria Rodriguez</h3>
-                                        <div class="comment-card__stats">
-                                            <span class="comment-card__like-count">
-                                                <i class="fa-regular fa-heart" aria-hidden="true"></i> 8
-                                            </span>
-                                        </div>
+                                        <span class="comment-card__like-count">
+                                            <i class="fa-regular fa-heart" aria-hidden="true"></i> 8
+                                        </span>
                                     </div>
                                     <div class="comment-card__meta">
                                         <time datetime="PT1H" class="comment-card__duration">
@@ -355,73 +369,67 @@
                                         </li>
                                         <li class="comment-card__action-item">
                                             <button type="button" class="comment-card__btn"><i
-                                                    class="fa-regular fa-share-nodes" aria-hidden="true"></i>
+                                                    class="fa-solid fa-share-nodes" aria-hidden="true"></i>
                                                 Share</button>
                                         </li>
                                     </ul>
                                 </div>
                             </article>
-
-                            <ul class="comment-thread comment-thread--nested">
-                                <li class="comment-thread__item">
-                                    <article class="comment-card">
-                                        <img src="alex-profile.jpg" alt="Alex Chen's profile picture"
-                                            class="comment-card__avatar">
-                                        <div class="comment-card__body">
-                                            <div class="comment-card__header">
-                                                <h3 class="comment-card__user-name">Alex Chen</h3>
-                                                <div class="comment-card__stats">
-                                                    <span class="comment-card__like-count">
-                                                        <i class="fa-regular fa-heart" aria-hidden="true"></i> 5
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-card__meta">
-                                                <time datetime="PT30M" class="comment-card__duration">
-                                                    <i class="fa-regular fa-clock" aria-hidden="true"></i> 30 minutes
-                                                    ago
-                                                </time>
-                                            </div>
-                                            <p class="comment-card__text">
-                                                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                                tellus.
-                                            </p>
-                                            <ul class="comment-card__actions" aria-label="Comment actions">
-                                                <li class="comment-card__action-item">
-                                                    <button type="button" class="comment-card__btn"><i
-                                                            class="fa-regular fa-heart" aria-hidden="true"></i>
-                                                        Like</button>
-                                                </li>
-                                                <li class="comment-card__action-item">
-                                                    <button type="button" class="comment-card__btn"><i
-                                                            class="fa-regular fa-comment" aria-hidden="true"></i>
-                                                        Reply</button>
-                                                </li>
-                                                <li class="comment-card__action-item">
-                                                    <button type="button" class="comment-card__btn"><i
-                                                            class="fa-regular fa-share-nodes" aria-hidden="true"></i>
-                                                        Share</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </article>
-                                </li>
-                            </ul>
+                        </li>
+                        <li class="comment-thread__item">
+                            <article class="comment-card">
+                                <img src="./img/person/person-f-9.webp" alt="Alex Chen's profile picture"
+                                    class="comment-card__avatar">
+                                <div class="comment-card__body">
+                                    <div class="comment-card__header">
+                                        <h3 class="comment-card__user-name">Alex Chen</h3>
+                                        <span class="comment-card__like-count">
+                                            <i class="fa-regular fa-heart" aria-hidden="true"></i> 5
+                                        </span>
+                                    </div>
+                                    <div class="comment-card__meta">
+                                        <time datetime="PT30M" class="comment-card__duration">
+                                            <i class="fa-regular fa-clock" aria-hidden="true"></i> 30 minutes
+                                            ago
+                                        </time>
+                                    </div>
+                                    <p class="comment-card__text">
+                                        Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                                        tellus.
+                                    </p>
+                                    <ul class="comment-card__actions" aria-label="Comment actions">
+                                        <li class="comment-card__action-item">
+                                            <button type="button" class="comment-card__btn"><i
+                                                    class="fa-regular fa-heart" aria-hidden="true"></i>
+                                                Like</button>
+                                        </li>
+                                        <li class="comment-card__action-item">
+                                            <button type="button" class="comment-card__btn"><i
+                                                    class="fa-regular fa-comment" aria-hidden="true"></i>
+                                                Reply</button>
+                                        </li>
+                                        <li class="comment-card__action-item">
+                                            <button type="button" class="comment-card__btn"><i
+                                                    class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                                                Share</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
                         </li>
                     </ul>
                 </li>
 
                 <li class="comment-thread__item">
                     <article class="comment-card">
-                        <img src="emily-profile.jpg" alt="Emily Watson's profile picture" class="comment-card__avatar">
+                        <img src="./img/person/person-f-7.webp" alt="Emily Watson's profile picture"
+                            class="comment-card__avatar">
                         <div class="comment-card__body">
                             <div class="comment-card__header">
                                 <h3 class="comment-card__user-name">Emily Watson</h3>
-                                <div class="comment-card__stats">
-                                    <span class="comment-card__like-count">
-                                        <i class="fa-regular fa-heart" aria-hidden="true"></i> 15
-                                    </span>
-                                </div>
+                                <span class="comment-card__like-count">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i> 15
+                                </span>
                             </div>
                             <div class="comment-card__meta">
                                 <time datetime="PT3H" class="comment-card__duration">
@@ -442,7 +450,7 @@
                                             aria-hidden="true"></i> Reply</button>
                                 </li>
                                 <li class="comment-card__action-item">
-                                    <button type="button" class="comment-card__btn"><i class="fa-regular fa-share-nodes"
+                                    <button type="button" class="comment-card__btn"><i class="fa-solid fa-share-nodes"
                                             aria-hidden="true"></i> Share</button>
                                 </li>
                             </ul>
@@ -451,7 +459,45 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Comment Form -->
+        <form action="/submit" method="post" id="feedback-form">
+            <header class="feedback-form__header">
+                <h2 class="feedback-form__title">Share Your Thoughts</h2>
+                <p class="feedback-form__note">Your email address will not be published. Required fields are marked *
+                </p>
+            </header>
+            <fieldset class="feedback-form__fields">
+                <div class="feedback-form__row">
+                    <div class="feedback-form__field">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" name="fullName" id="full-name" placeholder="Enter your full name" required
+                            autocomplete="name">
+                    </div>
+                    <div class="feedback-form__field">
+                        <label for="email-address">Email Address *</label>
+                        <input type="email" name="emailAddress" id="email-address"
+                            placeholder="Enter your email address" required autocomplete="email">
+                    </div>
+                </div>
+
+                <div class="feedback-form__field">
+                    <label for="website-url">Website</label>
+                    <input type="url" name="websiteUrl" id="website-url" placeholder="Your website (optional)"
+                        autocomplete="url">
+                </div>
+
+                <div class="feedback-form__field">
+                    <label for="comment-message">Your Comment *</label>
+                    <textarea name="commentMessage" id="comment-message" rows="4"
+                        placeholder="Write your thoughts here..." required></textarea>
+                </div>
+
+                <button type="submit" class="feedback-form__submit">Post Comment</button>
+            </fieldset>
+        </form>
     </main>
+    <!-- Footer -->
     <footer id="footer">
         <div class="footer__container">
             <div class="footer__top">
