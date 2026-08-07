@@ -634,11 +634,8 @@ body.top-jump {
 .featured-destinations {
     display: flex;
     margin: 2em 0;
-    justify-content: flex-start;
-    align-items: flex-start;
     padding: 15px;
     flex-direction: column;
-    gap: 1em;
 }
 
 .featured-destinations__description {
@@ -651,7 +648,7 @@ body.top-jump {
 .featured-destinations__grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-top: 1.5rem;
     gap: 1.5rem;
 }
 
@@ -664,6 +661,7 @@ body.top-jump {
     background-color: var(--primary-color);
     box-shadow: var(--shadow-card);
     border-radius: var(--radius-medium);
+    overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.03);
     flex-direction: column;
     gap: 2rem;
@@ -675,7 +673,6 @@ body.top-jump {
 
 .destination__image {
     width: 100%;
-    border-radius: var(--radius-xlarge) var(--radius-xlarge) 0 0;
 }
 
 .destination__badge {
@@ -814,6 +811,21 @@ body.top-jump {
     background-color: var(--main-color);
 }
 
+.featured-destinations__description {
+    position: relative;
+}
+
+.featured-destinations__description::after {
+    height: 2px;
+    width: 140px;
+    position: absolute;
+    top: 13px;
+    right: -147px;
+    content: "";
+    display: block;
+    background-color: var(--main-color);
+}
+
 .featured-tours__grid {
     display: flex;
     flex-direction: column;
@@ -908,9 +920,6 @@ body.top-jump {
     margin-bottom: 31px;
 }
 
-/* NOTE: The following badge variant selectors repeat above but are kept for
-    specificity/ordering reasons (variants and overrides). They are kept as-is
-    to avoid unintended visual changes. */
 
 .tours-card__badge.tours-card__badge--cultural {
     background-color: var(--badge-cultural);
@@ -1572,7 +1581,8 @@ body.top-jump {
    SCROLL TO TOP BUTTON
    ======================================== */
 
-.page-scrolled {
+.page-scrolled,
+.whatsapp-link {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: var(--radius-full);
@@ -1585,6 +1595,17 @@ body.top-jump {
     justify-content: center;
     align-items: center;
     z-index: 1;
+}
+
+.whatsapp-link {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-full);
+    background-color: green; 
+    right: 88px;
+    bottom: 15px; 
+    color: var(--primary-color);  
 }
 
 .upper-arrow {
@@ -2135,7 +2156,7 @@ body.top-jump {
     .featured-destinations__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: 3rem 4rem;
+        margin: 3rem 0 0 0;
     }
 
     .destination__footer {
@@ -2265,8 +2286,13 @@ body.top-jump {
     .featured-tours__grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        margin: 3rem;
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    .featured-destinations {
         width: 90%;
+        margin-inline: auto;
     }
 
     .feature {
@@ -2279,6 +2305,11 @@ body.top-jump {
         transform: translateY(-5%);
         box-shadow: var(--shadow-medium);
         border-color: var(--main-color);
+    }
+
+    .featured-tours {
+        width: 90%;
+        margin: 2rem auto;
     }
 
     .feature__icon {

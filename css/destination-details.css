@@ -601,6 +601,14 @@ body {
         margin: 30px;
     }
 
+    .attractive-places__text {
+        padding-block-end: 5%;
+    }
+
+    .attractive-places {
+        padding-block: 10%;
+    }
+
     .attractive-places__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
