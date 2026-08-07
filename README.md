@@ -17,7 +17,11 @@
 
 A modern, responsive travel booking website built with vanilla HTML, CSS, and JavaScript. This project delivers a polished multi-page experience for showcasing destinations, tour packages, blogs, testimonials, and booking flows in a clean and professional layout.
 
-## 📌 Project Overview
+## � Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Site-2ea44f?style=for-the-badge&logo=netlify)](https://curious-rugelach-901543.netlify.app/)
+
+## �📌 Project Overview
 
 This website is designed for travel agencies, tour operators, and hospitality brands that want a fast, elegant online presence without relying on heavy frameworks. It combines smooth navigation, attractive visuals, and reusable page structure to make the experience feel premium on both desktop and mobile devices.
 
