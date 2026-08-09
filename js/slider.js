@@ -42,8 +42,6 @@ if (slider && testiCard.length > 0) {
     let autoSlideTimer = null;
 
     function dragStart(e) {
-        e.preventDefault();
-
         if (e.type === 'touchstart') {
             startX = e.touches[0].clientX;
         } else {
@@ -59,7 +57,6 @@ if (slider && testiCard.length > 0) {
 
     function dragMove(e) {
         if (!isDragging) return;
-        e.preventDefault();
 
         let currentX;
         if (e.type === 'touchmove') {
@@ -477,7 +474,7 @@ if (testiTrack && originalCount > 0) {
     }
 
     radioBtns.forEach((btn, index) => {
-        btn.addEventListener("click", () => { 
+        btn.addEventListener("click", () => {
 
             currIndex = index + CLONE_COUNT;
             clearTimeout(autoTimer);
@@ -525,7 +522,6 @@ if (testiTrack && originalCount > 0) {
     startAutoTimer();
 
     function dragStart(event) {
-        event.preventDefault();
         startX = event.type === "touchstart" ? event.touches[0].clientX : event.clientX;
         testiTrack.style.transition = "none";
         isDragging = true;
@@ -535,7 +531,6 @@ if (testiTrack && originalCount > 0) {
 
     function dragMove(event) {
         if (!isDragging) return;
-        event.preventDefault();
         let currentX = event.type === "touchmove" ? event.touches[0].clientX : event.clientX;
         const deltaX = currentX - startX;
         const offsetPx = currIndex * step - deltaX;
@@ -545,7 +540,6 @@ if (testiTrack && originalCount > 0) {
     function dragEnd(event) {
         if (!isDragging) return;
         isDragging = false;
-        event.preventDefault();
         track__card.forEach(iterator => { iterator.classList.remove("track-card-dragging") });
 
         let finalX = event.type === "touchend" ? event.changedTouches[0].clientX : event.clientX;
