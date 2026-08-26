@@ -167,12 +167,6 @@ if (slider && testiCard.length > 0) {
         slider.classList.remove('dragging');
     });
 
-    document.addEventListener('touchmove', function (e) {
-        if (isDragging) {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
     autoSlideTimer = setInterval(autoSlideFunction, 5000);
 }
 
@@ -296,12 +290,6 @@ if (lightBoxSlider && galleryPics.length > 0) {
             lightBoxSlider.addEventListener('touchstart', dragStart);
             lightBoxSlider.addEventListener('touchmove', dragMove);
             lightBoxSlider.addEventListener('touchend', dragEnd);
-
-            document.addEventListener('touchmove', function (e) {
-                if (isDragging) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
         });
     });
 }
@@ -423,12 +411,6 @@ if (lightboxSlider && galleryItems.length > 0) {
             lightboxSlider.addEventListener('touchstart', dragStart);
             lightboxSlider.addEventListener('touchmove', dragMove);
             lightboxSlider.addEventListener('touchend', dragEnd);
-
-            document.addEventListener('touchmove', function (e) {
-                if (isDragging) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
         });
     });
 }
